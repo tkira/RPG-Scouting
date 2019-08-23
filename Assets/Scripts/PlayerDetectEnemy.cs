@@ -10,30 +10,40 @@ public class PlayerDetectEnemy : MonoBehaviour {
     //DetectRange 
     public float enemyDetectRange = 50;
 
+    //Bool in range of an enemy
     public bool inRangeEnemy = false;
+
+    //Gameobject of closest enemy
     public GameObject closestEnemy = null;
+
+    //Distance of closest enemy
     public float closestDis = 0;
 
     // Update is called once per frame
     void Update () {
+        //Check if not manually targeted enemy.
         if (runPlayerDetectEnemyScript) {
+            //run function findclostedenemy
             closestEnemy = FindClosestEnemy ();
+            //if found enemy set distance.
             if (closestEnemy != null) {
                 inRangeEnemy = true;
                 closestDis = (closestEnemy.transform.position - this.transform.position).sqrMagnitude;
                 Debug.DrawLine (this.transform.position, closestEnemy.transform.position);
             } else {
+                //set false of no enemies found.
                 inRangeEnemy = false;
             }
         }
     }
 
     public GameObject FindClosestEnemy () {
+        //get list if all enemies.
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
         List<GameObject> enemiesInRange = new List<GameObject> ();
-        //Get all enemies in range.
+        //Get search all enemies in range.
         foreach (GameObject enemy in enemies) {
             float curDistance = (enemy.transform.position - this.transform.position).sqrMagnitude;
             if (curDistance < enemyDetectRange) {
@@ -48,7 +58,7 @@ public class PlayerDetectEnemy : MonoBehaviour {
 
         //Find the closest enemy in enemiesInRange
         GameObject closest = null;
-        //If one enemy, set default
+        //If one enemy, set only enemy
         if (enemiesInRange.Count == 1) {
             closest = enemiesInRange[0];
         } else if (enemiesInRange.Count > 1) {
@@ -60,6 +70,7 @@ public class PlayerDetectEnemy : MonoBehaviour {
                 }
                 float cloDistance = (closest.transform.position - this.transform.position).sqrMagnitude;
                 float curDistance = (enemiesInRange[i].transform.position - this.transform.position).sqrMagnitude;
+                //compare current enemy with another and set if closer.
                 if (curDistance < cloDistance) {
                     closest = enemiesInRange[i];
                 }

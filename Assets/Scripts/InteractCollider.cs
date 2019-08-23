@@ -10,6 +10,7 @@ public class InteractCollider : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D col) {
         Debug.Log ("Hit Object");
         if (col.gameObject.tag == "Interact") {
+            //Set object to active
             interactIcon.SetActive(true);
         }
     }
@@ -18,6 +19,7 @@ public class InteractCollider : MonoBehaviour {
     void OnTriggerExit2D (Collider2D col) {
         Debug.Log ("Exit Object");
         if (col.gameObject.tag == "Interact") {
+            //Disable object
             interactIcon.SetActive(false);
         }
     }

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject interactIcon;
 
     //Reference TargetInteraction to see if player left clicked interation
-    public TargetInteraction targetInter;
+    public LeftClick targetInter;
 
 
     // Update is called once per frame
