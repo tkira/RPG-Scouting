@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - bullet
+  - enemy
   - Interact
   - Enemy
   layers:
@@ -40,6 +42,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 3453076533
+    locked: 0
+  - name: character
+    uniqueID: 1669481755
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
