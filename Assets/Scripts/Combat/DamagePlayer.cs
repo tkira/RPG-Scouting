@@ -8,20 +8,23 @@ public class DamagePlayer : MonoBehaviour {
     public bool crushDamageType;
     public bool explosiveDamageType;
 
+    public int damage;
+
     public CharacterStats characterStats;
 
-    //Deal Damage 
+    //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D col) {
         Debug.Log ("Hit Player");
         if (col.gameObject.tag == "Player") {
+            characterStats = col.gameObject.GetComponent<CharacterStats>();
             if (slashDamageType) {
-                characterStats.takeSlashingDamage(100);
+                characterStats.takeSlashingDamage(damage);
             } else if (pierceDamageType) {
-                characterStats.takePiercingDamage(100);
+                characterStats.takePiercingDamage(damage);
             } else if (crushDamageType) {
-                characterStats.takeCrushingDamage(100);
+                characterStats.takeCrushingDamage(damage);
             } else if (explosiveDamageType) {
-                characterStats.takeExplosiveDamage(100);
+                characterStats.takeExplosiveDamage(damage);
             }
         }
     }
