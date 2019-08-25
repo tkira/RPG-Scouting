@@ -36,12 +36,18 @@ public class RightClick : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.Mouse1)) {
             //Get position
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-            //Facing Left
+
+            //Moving Right
             if (targetPosition.x > transform.position.x) {
+                //Flip Character
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
+                //Set Walking Animation
                 animator.SetBool ("Moving", true);
+                //Moving Left
             } else if (targetPosition.x < transform.position.x) {
+                //Flip Character
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
+                //Set Walking Animation
                 animator.SetBool ("Moving", true);
             }
         } else if (targetInter.targetedInteract) {

@@ -17,7 +17,9 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        //Go towards player last postion
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        //Destroy upon reaching
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
             DestroyProjectile();
@@ -26,6 +28,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //If hit, destroy
         if (other.CompareTag("Player"))
         {
             DestroyProjectile();

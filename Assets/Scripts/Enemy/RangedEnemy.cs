@@ -38,6 +38,7 @@ public class RangedEnemy : MonoBehaviour
 
         if (timeBtwShots <= 0)
         {
+            //Shoot projectile
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
         }
