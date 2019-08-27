@@ -101,7 +101,7 @@ public class InteractCollider : MonoBehaviour {
                 movecameraleft();
                 Debug.Log("Lefttriggerworked");
             }
-            if (Rtrigger == true)
+            if (Btrigger == true)
             {
                 movecameradown();
                 Debug.Log("Bottomtriggerworked");
@@ -132,7 +132,7 @@ public class InteractCollider : MonoBehaviour {
     {
         GameObject.Find("Main Camera").transform.position = new Vector3((float)0.1, (float)-16.5, (float)-10);
 
-        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos -= 4, zPos);
+        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos -= 6, zPos);
     }
 
 
