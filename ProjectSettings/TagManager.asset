@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Interact
   - Enemy
+  - Portal
+  - Top Door
+  - Bottom Door
+  - Left Door
+  - Right Door
   layers:
   - Default
   - TransparentFX
@@ -38,7 +43,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Camera
   m_SortingLayers:
   - name: Default
     uniqueID: 0
