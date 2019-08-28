@@ -15,6 +15,8 @@ public class InteractCollider : MonoBehaviour {
     bool Ltrigger = false;
     float xPos;
     float yPos;
+    float xPosCamera;
+    float yPosCamera;
     float zPos;
     //Enable object if in range
 
@@ -83,6 +85,8 @@ public class InteractCollider : MonoBehaviour {
         xPos = GameObject.Find("Player").transform.position.x;
         yPos = GameObject.Find("Player").transform.position.y;
         zPos = GameObject.Find("Player").transform.position.z;
+        xPosCamera = GameObject.Find("Main Camera").transform.position.x;
+        yPosCamera = GameObject.Find("Main Camera").transform.position.y;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -112,27 +116,27 @@ public class InteractCollider : MonoBehaviour {
 
     public void movecameraup()
     {
-        GameObject.Find("Main Camera").transform.position = new Vector3((float)0.1, (float)16.5, (float)-10);
+        GameObject.Find("Main Camera").transform.position = new Vector3(xPosCamera, yPosCamera += 16.5f, (float)-10);
 
-        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos += 4, zPos);
+        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos += 7, zPos);
     }
     public void movecameraright()
     {
-        GameObject.Find("Main Camera").transform.position = new Vector3(30, (float)-0.9, (float)-10);
+        GameObject.Find("Main Camera").transform.position = new Vector3(xPosCamera += 30, yPosCamera, (float)-10);
 
-        GameObject.Find("Player").transform.position = new Vector3(xPos += 4, yPos, zPos);
+        GameObject.Find("Player").transform.position = new Vector3(xPos += 5, yPos, zPos);
     }
     public void movecameraleft()
     {
-        GameObject.Find("Main Camera").transform.position = new Vector3(-30, (float)-0.9, (float)-10);
+        GameObject.Find("Main Camera").transform.position = new Vector3(xPosCamera -= 30f, yPosCamera, (float)-10);
 
-        GameObject.Find("Player").transform.position = new Vector3(xPos -= 4, yPos, zPos);
+        GameObject.Find("Player").transform.position = new Vector3(xPos -= 5, yPos, zPos);
     }
     public void movecameradown()
     {
-        GameObject.Find("Main Camera").transform.position = new Vector3((float)0.1, (float)-16.5, (float)-10);
+        GameObject.Find("Main Camera").transform.position = new Vector3(xPosCamera, yPosCamera -= 16.5f, (float)-10);
 
-        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos -= 6, zPos);
+        GameObject.Find("Player").transform.position = new Vector3(xPos, yPos -= 7, zPos);
     }
 
 
