@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RightClick : MonoBehaviour {
 
+    public Collider2D combatCollider;
+
     //Check what direction character is facing
     public bool facingLeft;
     public Animator animator;
     Vector3 setScale;
 
     public Vector2 targetPosition;
-    // Start is called before the first frame update
-    bool inRangeOfEnemy = false;
+    // In range of enemy 
+    public bool inRangeOfEnemy = false;
     //Interact Icon
     public GameObject interactIcon;
 
@@ -28,8 +30,8 @@ public class RightClick : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //Select idle animation
-        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) {
-            animator.SetBool ("Moving", false);
+        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y && inRangeOfEnemy == false) {
+            animator.SetInteger ("MovingType", 0);
         }
 
         //CLick left mouse
@@ -42,23 +44,23 @@ public class RightClick : MonoBehaviour {
                 //Flip Character
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
                 //Moving Left
             } else if (targetPosition.x < transform.position.x) {
                 //Flip Character
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             }
         } else if (targetInter.targetedInteract) {
             targetInter.targetedInteract = false;
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
             if (targetPosition.x > transform.position.x) {
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             } else if (targetPosition.x < transform.position.x) {
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             }
         }
 

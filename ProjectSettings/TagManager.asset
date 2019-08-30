@@ -52,3 +52,6 @@ TagManager:
   - name: GUI
     uniqueID: 4216193307
     locked: 0
+  - name: Attack
+    uniqueID: 2609170637
+    locked: 0

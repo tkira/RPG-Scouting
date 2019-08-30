@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: f74b4e3bc90f34c47a7184e2e57d567d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7910138628339051312
+    second: Rapier_Swing_0
+  - first:
+      213: -7453123988273508567
+    second: Rapier_Swing_1
+  - first:
+      213: -1255360087594996970
+    second: Rapier_Swing_2
+  - first:
+      213: 8642511588120497766
+    second: Rapier_Swing_3
+  - first:
+      213: -3506093877829209162
+    second: Rapier_Swing_4
+  - first:
+      213: 75898703557619590
+    second: Rapier_Swing_5
+  - first:
+      213: -5149383493146150156
+    second: Rapier_Swing_6
+  - first:
+      213: -7498491302941868665
+    second: Rapier_Swing_7
+  - first:
+      213: -1243863596448915578
+    second: Rapier_Swing_8
+  - first:
+      213: -4520497690365333283
+    second: Rapier_Swing_9
+  - first:
+      213: 5070893064331853544
+    second: Rapier_Swing_10
+  - first:
+      213: 2709103721782456822
+    second: Rapier_Swing_11
+  - first:
+      213: -2053298515530491464
+    second: Rapier_Swing_12
+  - first:
+      213: -8467274542596311841
+    second: Rapier_Swing_13
+  - first:
+      213: -8747919056661325545
+    second: Rapier_Swing_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rapier_Swing_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 56
+        height: 54
+      alignment: 9
+      pivot: {x: 0.49999985, y: 0.3479208}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f926ca1df067c4696b698d8c6e4209
+      internalID: 7910138628339051312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 13
+        width: 48
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7431262, y: 0.26227656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6505a1e6745a2641adb80ad44b4c305
+      internalID: -7453123988273508567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 11
+        width: 52
+        height: 13
+      alignment: 9
+      pivot: {x: 0.75767225, y: 0.43350336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1929f7b73f033d4dad21bfcc1ce0ea4
+      internalID: -1255360087594996970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 11
+        width: 49
+        height: 13
+      alignment: 9
+      pivot: {x: 0.7734481, y: 0.4999994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e741a2aaebda244af6c3a86206c332
+      internalID: 8642511588120497766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_4
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 11
+        width: 49
+        height: 13
+      alignment: 9
+      pivot: {x: 0.80873203, y: 0.4667514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede745ad26f469546bb5ca01604f0202
+      internalID: -3506093877829209162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 11
+        width: 49
+        height: 13
+      alignment: 9
+      pivot: {x: 0.7999112, y: 0.4667514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b900ba017d163104186f0b4cdc507926
+      internalID: 75898703557619590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 9
+        width: 60
+        height: 15
+      alignment: 9
+      pivot: {x: 0.66568655, y: 0.528815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75c911f0b6985e4289f64d584aedc09
+      internalID: -5149383493146150156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 11
+        width: 60
+        height: 13
+      alignment: 9
+      pivot: {x: 0.67289025, y: 0.4667514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af13db2be4b874e44bd65aa4cfdbe7d3
+      internalID: -7498491302941868665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 11
+        width: 60
+        height: 13
+      alignment: 9
+      pivot: {x: 0.665686, y: 0.5332476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f51fe7bb90f07443af1266bab82d1d2
+      internalID: -1243863596448915578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 11
+        width: 60
+        height: 13
+      alignment: 9
+      pivot: {x: 0.665686, y: 0.4999994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6232177e2a09c4283a352986659a26
+      internalID: -4520497690365333283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_10
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 11
+        width: 52
+        height: 13
+      alignment: 9
+      pivot: {x: 0.6662398, y: 0.5332476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abef80e5e4309a44985ff56e9c4af8b1
+      internalID: 5070893064331853544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_11
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 11
+        width: 52
+        height: 13
+      alignment: 9
+      pivot: {x: 0.78261036, y: 0.5332476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731a1c03bfc723046bb03503bd90c29f
+      internalID: 2709103721782456822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_12
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 13
+        width: 48
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7251167, y: 0.26227656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7ce722c3bbf714cbd6ed639208ccda
+      internalID: -2053298515530491464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_13
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 14
+        width: 36
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6680874, y: 0.1463616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c8662a73e396842be578409988c4f9
+      internalID: -8467274542596311841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rapier_Swing_14
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 15
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.46398416, y: 0.1231888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5bcb755da9ad8429b71089d6352034
+      internalID: -8747919056661325545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
