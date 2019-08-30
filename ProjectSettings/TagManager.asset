@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SpawnPoint
+  - NotSpawnPoint
+  - Rooms
+  - AlreadyRoom
+  - Monsters
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1327203013
+    locked: 0
+  - name: Walls
+    uniqueID: 2927565453
+    locked: 0
+  - name: Doors
+    uniqueID: 3081099645
+    locked: 0
+  - name: Symbols
+    uniqueID: 1175433679
+    locked: 0
+  - name: Treasure
+    uniqueID: 237855963
+    locked: 0
+  - name: Monsters
+    uniqueID: 1290698243
+    locked: 0
+  - name: MapRooms
+    uniqueID: 973798151
+    locked: 0
+  - name: MapSymbols
+    uniqueID: 712738761
+    locked: 0
