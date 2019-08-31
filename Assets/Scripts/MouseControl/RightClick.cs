@@ -25,6 +25,28 @@ public class RightClick : MonoBehaviour {
         setScale = transform.localScale;
     }
 
+    public void teleportToNewPositionT () {
+        transform.position = new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z);
+        StartCoroutine (Wait (transform.position));
+    }
+    public void teleportToNewPositionB () {
+        transform.position = new Vector3 (transform.position.x, transform.position.y - 4, transform.position.z);
+        StartCoroutine (Wait (transform.position));
+    }
+    public void teleportToNewPositionR () {
+        transform.position = new Vector3 (transform.position.x + 4, transform.position.y, transform.position.z);
+        StartCoroutine (Wait (transform.position));
+    }
+    public void teleportToNewPositionL () {
+        transform.position = new Vector3 (transform.position.x - 4, transform.position.y, transform.position.z);
+        StartCoroutine (Wait (transform.position));
+    }
+
+    IEnumerator Wait (Vector3 pos) {
+        yield return new WaitForSeconds (0.1f);
+        targetPosition = pos;
+    }
+
     // Update is called once per frame
     void Update () {
         //Select idle animation

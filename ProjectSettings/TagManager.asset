@@ -4,8 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Interact
-  - Enemy
+  - SpawnPoint
+  - NotSpawnPoint
+  - Rooms
+  - AlreadyRoom
+  - Monsters
+  - MapGUI
+  - TopDoor
+  - BottomDoor
+  - LeftDoor
+  - RightDoor
   layers:
   - Default
   - TransparentFX
@@ -43,12 +51,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 3615341397
+  - name: Floor
+    uniqueID: 1327203013
     locked: 0
-  - name: Objects
-    uniqueID: 1409677161
+  - name: Walls
+    uniqueID: 2927565453
     locked: 0
-  - name: GUI
-    uniqueID: 4216193307
+  - name: Doors
+    uniqueID: 3081099645
+    locked: 0
+  - name: Symbols
+    uniqueID: 1175433679
+    locked: 0
+  - name: Treasure
+    uniqueID: 237855963
+    locked: 0
+  - name: Monsters
+    uniqueID: 1290698243
+    locked: 0
+  - name: MapRooms
+    uniqueID: 973798151
+    locked: 0
+  - name: MapSymbols
+    uniqueID: 712738761
+    locked: 0
+  - name: Player
+    uniqueID: 2990528803
+    locked: 0
+  - name: Icons
+    uniqueID: 269309939
     locked: 0
