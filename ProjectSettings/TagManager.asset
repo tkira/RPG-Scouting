@@ -9,6 +9,11 @@ TagManager:
   - Rooms
   - AlreadyRoom
   - Monsters
+  - MapGUI
+  - TopDoor
+  - BottomDoor
+  - LeftDoor
+  - RightDoor
   layers:
   - Default
   - TransparentFX
@@ -69,4 +74,10 @@ TagManager:
     locked: 0
   - name: MapSymbols
     uniqueID: 712738761
+    locked: 0
+  - name: Player
+    uniqueID: 2990528803
+    locked: 0
+  - name: Icons
+    uniqueID: 269309939
     locked: 0
