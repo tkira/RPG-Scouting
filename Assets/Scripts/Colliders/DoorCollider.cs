@@ -18,6 +18,10 @@ public class DoorCollider : MonoBehaviour {
 
     public RightClick rcPlayer;
 
+    void Start () {
+        //Physics2D.IgnoreLayerCollision (8, 9,true);
+    }
+
     void OnTriggerEnter2D (Collider2D col) {
         //-----interactable icons
         if (col.gameObject.tag == "Interact") {
@@ -30,24 +34,28 @@ public class DoorCollider : MonoBehaviour {
             if (!keyEntered) {
                 Ttrigger = true;
             }
+            rcPlayer.stop ();
         }
         if (col.gameObject.tag == "RightDoor") {
             if (!keyEntered) {
                 Rtrigger = true;
             }
             DoorIcon.SetActive (true);
+            rcPlayer.stop ();
         }
         if (col.gameObject.tag == "BottomDoor") {
             if (!keyEntered) {
                 Btrigger = true;
             }
             DoorIcon.SetActive (true);
+            rcPlayer.stop ();
         }
         if (col.gameObject.tag == "LeftDoor") {
             if (!keyEntered) {
                 Ltrigger = true;
             }
             DoorIcon.SetActive (true);
+            rcPlayer.stop ();
         }
     }
 
@@ -61,24 +69,36 @@ public class DoorCollider : MonoBehaviour {
         if (col.gameObject.tag == "TopDoor") {
             DoorIcon.SetActive (false);
             if (!keyEntered) {
+                Btrigger = false;
+                Ltrigger = false;
+                Rtrigger = false;
                 Ttrigger = false;
             }
         }
-        if (col.gameObject.tag == "Right Door") {
-            if (!keyEntered) {
-                Rtrigger = false;
-            }
-            DoorIcon.SetActive (false);
-        }
-        if (col.gameObject.tag == "Bottom Door") {
+        if (col.gameObject.tag == "RightDoor") {
             if (!keyEntered) {
                 Btrigger = false;
+                Ltrigger = false;
+                Rtrigger = false;
+                Ttrigger = false;
             }
             DoorIcon.SetActive (false);
         }
-        if (col.gameObject.tag == "Left Door") {
+        if (col.gameObject.tag == "BottomDoor") {
             if (!keyEntered) {
+                Btrigger = false;
                 Ltrigger = false;
+                Rtrigger = false;
+                Ttrigger = false;
+            }
+            DoorIcon.SetActive (false);
+        }
+        if (col.gameObject.tag == "LeftDoor") {
+            if (!keyEntered) {
+                Btrigger = false;
+                Ltrigger = false;
+                Rtrigger = false;
+                Ttrigger = false;
             }
             DoorIcon.SetActive (false);
         }

@@ -28,18 +28,27 @@ public class RightClick : MonoBehaviour {
     public void teleportToNewPositionT () {
         transform.position = new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        stop ();
     }
     public void teleportToNewPositionB () {
         transform.position = new Vector3 (transform.position.x, transform.position.y - 4, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        stop ();
     }
     public void teleportToNewPositionR () {
         transform.position = new Vector3 (transform.position.x + 4, transform.position.y, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        stop ();
     }
     public void teleportToNewPositionL () {
         transform.position = new Vector3 (transform.position.x - 4, transform.position.y, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        stop ();
+    }
+
+    public void stop () {
+        targetPosition = transform.position;
+        animator.SetBool ("Moving", false);
     }
 
     IEnumerator Wait (Vector3 pos) {
