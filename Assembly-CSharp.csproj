@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\2019.2.0f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -57,13 +55,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Colliders\DoorCollider.cs" />
+     <Compile Include="Assets\Scripts\Combat\AttackEnemy.cs" />
      <Compile Include="Assets\Scripts\Combat\DamagePlayer.cs" />
-     <Compile Include="Assets\Scripts\Combat\Enemy.cs" />
      <Compile Include="Assets\Scripts\Combat\PlayerDetectEnemy.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Combat\TargetEnemy.cs" />
-     <Compile Include="Assets\Scripts\Door\Teleportation.cs" />
-     <Compile Include="Assets\Scripts\Dungeon\MoveUp.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\Enemy\RangedEnemy.cs" />
      <Compile Include="Assets\Scripts\Level\AddRoom.cs" />
@@ -79,6 +74,7 @@
      <Compile Include="Assets\Scripts\MouseControl\RightClick.cs" />
      <Compile Include="Assets\Scripts\UI\GetInfoEnemy.cs" />
      <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\UNUSED\TargetEnemy.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/tungd/Documents/Unity Project/RPG-Scouting/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

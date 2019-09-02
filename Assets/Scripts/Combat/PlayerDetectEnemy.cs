@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class PlayerDetectEnemy : MonoBehaviour {
 
-    //Bool to disable auto target when player manually target enemy.
-    public bool runPlayerDetectEnemyScript = true;
-
     //DetectRange 
-    public float enemyDetectRange = 50;
+    public float enemyDetectRange;
 
     //Bool in range of an enemy
     public bool inRangeEnemy = false;
@@ -19,28 +16,28 @@ public class PlayerDetectEnemy : MonoBehaviour {
     //Distance of closest enemy
     public float closestDis = 0;
 
+    public RightClick rcCharacter;
+
     // Update is called once per frame
     void Update () {
-        //Check if not manually targeted enemy.
-        if (runPlayerDetectEnemyScript) {
-            //run function findclostedenemy
-            closestEnemy = FindClosestEnemy ();
-            //if found enemy set distance.
-            if (closestEnemy != null) {
-                inRangeEnemy = true;
-                closestDis = (closestEnemy.transform.position - this.transform.position).sqrMagnitude;
-                Debug.DrawLine (this.transform.position, closestEnemy.transform.position);
-            } else {
-                //set false of no enemies found.
-                inRangeEnemy = false;
-            }
+        //run function findclostedenemy
+        closestEnemy = FindClosestEnemy ();
+        //if found enemy set distance.
+        if (closestEnemy != null) {
+            inRangeEnemy = true;
+            closestDis = (closestEnemy.transform.position - this.transform.position).sqrMagnitude;
+            Debug.DrawLine (this.transform.position, closestEnemy.transform.position);
+        } else {
+            //set false of no enemies found.
+            inRangeEnemy = false;
         }
+
     }
 
     public GameObject FindClosestEnemy () {
         //get list if all enemies.
         GameObject[] enemies;
-        enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+        enemies = GameObject.FindGameObjectsWithTag ("Monsters");
 
         List<GameObject> enemiesInRange = new List<GameObject> ();
         //Get search all enemies in range.
@@ -73,9 +70,23 @@ public class PlayerDetectEnemy : MonoBehaviour {
                 //compare current enemy with another and set if closer.
                 if (curDistance < cloDistance) {
                     closest = enemiesInRange[i];
+                    
+                    //Flip to face enemy
+                    if (closest.transform.position.x > transform.position.x) {
+                        rcCharacter.flipPlayerRight ();
+                    } else if (closest.transform.position.x < transform.position.x) {
+                        rcCharacter.flipPlayerLeft ();
+                    }
                 }
             }
         }
         return closest;
+    }
+
+    //Stop if hit enemy;
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.CompareTag ("Monsters") && inRangeEnemy == true) {
+            rcCharacter.targetPosition = transform.position;
+        }
     }
 }

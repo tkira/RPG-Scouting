@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RightClick : MonoBehaviour {
 
+    //DoorCollider Script
+    public DoorCollider dCol;
+
     //Check what direction character is facing
     public bool facingLeft;
     public Animator animator;
     Vector3 setScale;
 
     public Vector2 targetPosition;
-    // Start is called before the first frame update
-    bool inRangeOfEnemy = false;
+
     //Interact Icon
     public GameObject interactIcon;
 
@@ -20,6 +22,8 @@ public class RightClick : MonoBehaviour {
 
     //Get movement of Current Character
     public CharacterStats characterStats;
+
+    public bool moving;
 
     void Start () {
         setScale = transform.localScale;
@@ -48,7 +52,7 @@ public class RightClick : MonoBehaviour {
 
     public void stop () {
         targetPosition = transform.position;
-        animator.SetBool ("Moving", false);
+        animator.SetInteger ("MovingType", 0);
     }
 
     IEnumerator Wait (Vector3 pos) {
@@ -60,11 +64,12 @@ public class RightClick : MonoBehaviour {
     void Update () {
         //Select idle animation
         if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) {
-            animator.SetBool ("Moving", false);
+            animator.SetInteger ("MovingType", 0);
+                    moving = false;
         }
 
-        //CLick left mouse
-        if (Input.GetKeyDown (KeyCode.Mouse1)) {
+        //CLick left mouse, also disable if moving rooms
+        if (Input.GetKeyDown (KeyCode.Mouse1) && !dCol.keyEntered) {
             //Get position
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
@@ -73,29 +78,37 @@ public class RightClick : MonoBehaviour {
                 //Flip Character
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
                 //Moving Left
             } else if (targetPosition.x < transform.position.x) {
                 //Flip Character
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             }
         } else if (targetInter.targetedInteract) {
             targetInter.targetedInteract = false;
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
             if (targetPosition.x > transform.position.x) {
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             } else if (targetPosition.x < transform.position.x) {
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
-                animator.SetBool ("Moving", true);
+                animator.SetInteger ("MovingType", 1);
             }
         }
-
+        moving = true;
         //Move player towards position
         transform.position = Vector2.MoveTowards (transform.position, targetPosition, Time.deltaTime * characterStats.moveSpeed);
 
         Debug.DrawLine (this.transform.position, targetPosition);
+    }
+
+    public void flipPlayerLeft () {
+        transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
+    }
+
+    public void flipPlayerRight () {
+        transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
     }
 }
