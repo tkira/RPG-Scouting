@@ -6,7 +6,7 @@ public class TargetEnemy : MonoBehaviour {
 
     public GameObject targetEnemy = null;
     public bool targetedEnemy = false;
-    public PlayerDetectEnemy playerDetectEnemyScript;
+    public PlayerDetectMonster playerDetectMonsterScript;
 
     GameObject ClickSelect () {
         //Get mouse position and find any objects in position

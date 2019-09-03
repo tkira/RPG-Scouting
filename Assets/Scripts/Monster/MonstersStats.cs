@@ -3,27 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterStats : MonoBehaviour {
-
-    public Transform characterPos;
-    public HealthBar healthbar;
-
-    //Level Info
-    public float currentLvl;
-    public float currentExp;
-    public float expNeedToLvl;
-    public float totalExp;
+public class MonstersStats : MonoBehaviour {
 
     //Main Stats
-    public float vitality;
     public float maxHealth;
     public float defence;
     public float meleeAttack;
     public float rangeAttack;
     public float attackSpeed;
     public float moveSpeed;
-    public float abilityPower;
-    public float dodge;
 
     //Resistances
     public float crushingRes;
@@ -32,41 +20,7 @@ public class CharacterStats : MonoBehaviour {
     public float explosiveRes;
 
     //Dynamic Stats 
-    public float characterCurrentHealth;
-    public float currentDamageOutput;
-
-    //Level Up Character
-    void levelUp () {
-        currentLvl++;
-
-        //Add level up stats 
-        maxHealth += 10;
-
-        currentExp -= expNeedToLvl; //Reset Exp bar and keep extra exp
-        expNeedToLvl = expNeedToLvl * 2; //Double exp need for next lvl;
-    }
-
-    //Add Stats and their Ratios
-    public void addVitality () {
-        vitality++;
-        maxHealth = maxHealth + 5;
-    }
-
-    public void addDefence () {
-        defence++;
-    }
-
-    public void addMeleeAttack () {
-        meleeAttack++;
-    }
-
-    public void addRangeAttack () {
-        rangeAttack++;
-    }
-
-    public void addAbilityPower () {
-        abilityPower++;
-    }
+    public float monsterCurrentHealth;
 
     //Take Damage, adjusted by defence and resistances. Update health bar
     public void takeCrushingDamage (float damage) {
@@ -84,14 +38,19 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage, deal damage
             //This is to prevent dealing minus damage because of defence higher than damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
+        }
+
+        //Destroy if no health left 
+        if (monsterCurrentHealth <= 0) {
+            Destroy (gameObject);
         }
     }
 
@@ -106,14 +65,19 @@ public class CharacterStats : MonoBehaviour {
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
+        }
+
+        //Destroy if no health left 
+        if (monsterCurrentHealth <= 0) {
+            Destroy (gameObject);
         }
     }
 
@@ -128,14 +92,19 @@ public class CharacterStats : MonoBehaviour {
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
+        }
+
+        //Destroy if no health left 
+        if (monsterCurrentHealth <= 0) {
+            Destroy (gameObject);
         }
     }
 
@@ -150,24 +119,26 @@ public class CharacterStats : MonoBehaviour {
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
-                characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                monsterCurrentHealth = monsterCurrentHealth - adjustedDamage;
             }
+        }
+
+        //Destroy if no health left 
+        if (monsterCurrentHealth <= 0) {
+            Destroy (gameObject);
         }
     }
 
     // Start is called before the first frame update
     void Start () {
         //Initial set max health
-        characterCurrentHealth = maxHealth;
-
-        //Current Damage is Melee to be added later for diferent swap  damage;
-        currentDamageOutput = meleeAttack;
+        monsterCurrentHealth = maxHealth;
     }
 
     // Update is called once per frame

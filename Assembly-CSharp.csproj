@@ -56,11 +56,10 @@
      <Compile Include="Assets\Scripts\Character\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Colliders\DoorCollider.cs" />
      <Compile Include="Assets\Scripts\Combat\AttackEnemy.cs" />
+     <Compile Include="Assets\Scripts\Combat\DamageMonsters.cs" />
      <Compile Include="Assets\Scripts\Combat\DamagePlayer.cs" />
-     <Compile Include="Assets\Scripts\Combat\PlayerDetectEnemy.cs" />
+     <Compile Include="Assets\Scripts\Combat\PlayerDetectMonster.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
-     <Compile Include="Assets\Scripts\Enemy\RangedEnemy.cs" />
      <Compile Include="Assets\Scripts\Level\AddRoom.cs" />
      <Compile Include="Assets\Scripts\Level\AlreadyRoomHere.cs" />
      <Compile Include="Assets\Scripts\Level\MonsterTemplates.cs" />
@@ -69,6 +68,9 @@
      <Compile Include="Assets\Scripts\Level\RoomTemplates.cs" />
      <Compile Include="Assets\Scripts\Level\SpriteColour.cs" />
      <Compile Include="Assets\Scripts\Level\StairsOnMap.cs" />
+     <Compile Include="Assets\Scripts\Monster\MonsterHealthBar.cs" />
+     <Compile Include="Assets\Scripts\Monster\MonstersStats.cs" />
+     <Compile Include="Assets\Scripts\Monster\RangedEnemy.cs" />
      <Compile Include="Assets\Scripts\MouseControl\InteractMouseHover.cs" />
      <Compile Include="Assets\Scripts\MouseControl\LeftClick.cs" />
      <Compile Include="Assets\Scripts\MouseControl\RightClick.cs" />

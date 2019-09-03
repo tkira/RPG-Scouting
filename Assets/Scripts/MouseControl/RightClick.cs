@@ -24,7 +24,8 @@ public class RightClick : MonoBehaviour {
     public CharacterStats characterStats;
 
     public bool moving;
-
+    public bool attacking;
+    
     void Start () {
         setScale = transform.localScale;
     }
@@ -52,7 +53,9 @@ public class RightClick : MonoBehaviour {
 
     public void stop () {
         targetPosition = transform.position;
+        transform.position = targetPosition;
         animator.SetInteger ("MovingType", 0);
+        moving = false;
     }
 
     IEnumerator Wait (Vector3 pos) {
@@ -63,9 +66,9 @@ public class RightClick : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //Select idle animation
-        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y) {
+        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y && !attacking) {
             animator.SetInteger ("MovingType", 0);
-                    moving = false;
+            moving = false;
         }
 
         //CLick left mouse, also disable if moving rooms
@@ -79,12 +82,14 @@ public class RightClick : MonoBehaviour {
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
                 animator.SetInteger ("MovingType", 1);
+                moving = true;
                 //Moving Left
             } else if (targetPosition.x < transform.position.x) {
                 //Flip Character
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
                 //Set Walking Animation
                 animator.SetInteger ("MovingType", 1);
+                moving = true;
             }
         } else if (targetInter.targetedInteract) {
             targetInter.targetedInteract = false;
@@ -92,12 +97,13 @@ public class RightClick : MonoBehaviour {
             if (targetPosition.x > transform.position.x) {
                 transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
                 animator.SetInteger ("MovingType", 1);
+                moving = true;
             } else if (targetPosition.x < transform.position.x) {
                 transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
                 animator.SetInteger ("MovingType", 1);
+                moving = true;
             }
         }
-        moving = true;
         //Move player towards position
         transform.position = Vector2.MoveTowards (transform.position, targetPosition, Time.deltaTime * characterStats.moveSpeed);
 
