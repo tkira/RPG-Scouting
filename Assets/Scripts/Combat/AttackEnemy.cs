@@ -21,8 +21,8 @@ public class AttackEnemy : MonoBehaviour {
         if (!rcChar.moving && playerDetect.closestEnemy != null) {
             //Start attacking animation
             if (!rcChar.attacking && !attackWait) {
-                StartCoroutine (AttackLoop ());
                 rcChar.attacking = true;
+                StartCoroutine (AttackLoop ());
             }
         } else if (!rcChar.moving && playerDetect.closestEnemy == null) {
             //Stop attacking if no enemy 
@@ -50,8 +50,8 @@ public class AttackEnemy : MonoBehaviour {
     }
 
     void OnTriggerEnter2D (Collider2D col) {
-        if (col.gameObject == playerDetect.closestEnemy){
-            rcChar.stop();
+        if (col.gameObject == playerDetect.closestEnemy) {
+            rcChar.stop ();
         }
     }
 }

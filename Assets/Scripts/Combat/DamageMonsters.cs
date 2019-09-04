@@ -11,19 +11,25 @@ public class DamageMonsters : MonoBehaviour {
     public CharacterStats charStats;
     public MonstersStats monsterStats;
 
+    public GameObject popupDam;
+
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D col) {
         if (col.gameObject.tag == "Monsters") {
-            monsterStats = col.gameObject.GetComponent<MonstersStats>();
-            Debug.Log(charStats.currentDamageOutput);
+            monsterStats = col.gameObject.GetComponent<MonstersStats> ();
+
+            GameObject popup = Instantiate (popupDam, monsterStats.monsterPosition.position, Quaternion.Euler (Vector3.zero));
+            popup.transform.SetParent (GameObject.FindGameObjectWithTag ("CombatUI").transform, false);
+            popup.GetComponent<PopupDamageEnemy> ().SetDamage (charStats.currentDamageOutput);
+            
             if (slashDamageType) {
-                monsterStats.takeSlashingDamage(charStats.currentDamageOutput);
+                monsterStats.takeSlashingDamage (charStats.currentDamageOutput);
             } else if (pierceDamageType) {
-                monsterStats.takePiercingDamage(charStats.currentDamageOutput);
+                monsterStats.takePiercingDamage (charStats.currentDamageOutput);
             } else if (crushDamageType) {
-                monsterStats.takeCrushingDamage(charStats.currentDamageOutput);
+                monsterStats.takeCrushingDamage (charStats.currentDamageOutput);
             } else if (explosiveDamageType) {
-                monsterStats.takeExplosiveDamage(charStats.currentDamageOutput);
+                monsterStats.takeExplosiveDamage (charStats.currentDamageOutput);
             }
         }
     }

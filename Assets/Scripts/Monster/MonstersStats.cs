@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MonstersStats : MonoBehaviour {
 
+    public Transform monsterPosition;
+
     //Main Stats
     public float maxHealth;
     public float defence;

@@ -25,7 +25,7 @@ public class RightClick : MonoBehaviour {
 
     public bool moving;
     public bool attacking;
-    
+
     void Start () {
         setScale = transform.localScale;
     }
@@ -72,7 +72,7 @@ public class RightClick : MonoBehaviour {
         }
 
         //CLick left mouse, also disable if moving rooms
-        if (Input.GetKeyDown (KeyCode.Mouse1) && !dCol.keyEntered) {
+        if (Input.GetKeyDown (KeyCode.Mouse1) && !dCol.keyEntered && !attacking) {
             //Get position
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
