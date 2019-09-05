@@ -61,7 +61,6 @@ public class DoorCollider : MonoBehaviour {
 
     //Disable if exit 
     void OnTriggerExit2D (Collider2D col) {
-        Debug.Log ("Exit Object");
         if (col.gameObject.tag == "Interact") {
             interactIcon.SetActive (false);
         }

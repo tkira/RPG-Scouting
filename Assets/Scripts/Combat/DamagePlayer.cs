@@ -14,7 +14,6 @@ public class DamagePlayer : MonoBehaviour {
 
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D col) {
-        Debug.Log ("Hit Player");
         if (col.gameObject.tag == "Player") {
             characterStats = col.gameObject.GetComponent<CharacterStats>();
             if (slashDamageType) {

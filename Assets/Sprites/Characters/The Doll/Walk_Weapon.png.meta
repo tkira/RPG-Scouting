@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 3ad386d972fb38741832ff707eb82a4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3805205629199976238
+    second: Walk_Weapon_0
+  - first:
+      213: -6873953359294501228
+    second: Walk_Weapon_1
+  - first:
+      213: 1666622351741676781
+    second: Walk_Weapon_2
+  - first:
+      213: 3844660129201150958
+    second: Walk_Weapon_3
+  - first:
+      213: -480707868293889335
+    second: Walk_Weapon_4
+  - first:
+      213: 5561506415300706144
+    second: Walk_Weapon_5
+  - first:
+      213: 8739652071401696688
+    second: Walk_Weapon_6
+  - first:
+      213: 1018234836572521138
+    second: Walk_Weapon_7
+  - first:
+      213: -3147328909975702029
+    second: Walk_Weapon_8
+  - first:
+      213: -5978420034176987729
+    second: Walk_Weapon_9
+  - first:
+      213: -6983395534186698193
+    second: Walk_Weapon_10
+  - first:
+      213: 4080836301183249575
+    second: Walk_Weapon_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Weapon_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 26
+        height: 63
+      alignment: 9
+      pivot: {x: 0.26155165, y: 0.460637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6d3afa11aea3a4ebd9587fd698c31c
+      internalID: 3805205629199976238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 31
+        height: 63
+      alignment: 9
+      pivot: {x: 0.22001524, y: 0.460637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8814046e7130a14387e28c06d6f7220
+      internalID: -6873953359294501228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 32
+        height: 63
+      alignment: 9
+      pivot: {x: 0.21769428, y: 0.460637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b26ba55d30e23649a73429d15c99d50
+      internalID: 1666622351741676781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 32
+        height: 62
+      alignment: 9
+      pivot: {x: 0.21215868, y: 0.4514311}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dca7f17942d7fe46b4dc3176d6082bd
+      internalID: 3844660129201150958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 32
+        height: 63
+      alignment: 9
+      pivot: {x: 0.23430061, y: 0.460637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea96722b290244044b401532c248d4f9
+      internalID: -480707868293889335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.21769428, y: 0.47232288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994858e3c08a15d4d8bcfe709e141412
+      internalID: 5561506415300706144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_6
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 32
+        height: 63
+      alignment: 9
+      pivot: {x: 0.23430061, y: 0.45501372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482aebfa52b61b047953ddef2b0ccbf8
+      internalID: 8739652071401696688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 0
+        width: 31
+        height: 63
+      alignment: 9
+      pivot: {x: 0.237158, y: 0.45782536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcdf6d7a574a4347b6c27aa831675f7
+      internalID: 1018234836572521138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 32
+        height: 62
+      alignment: 9
+      pivot: {x: 0.22323036, y: 0.4542881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b1fab40ec9dfa4c98849b2480bfb1b
+      internalID: -3147328909975702029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_9
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 32
+        height: 62
+      alignment: 9
+      pivot: {x: 0.21769524, y: 0.4485741}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb15ae134ff1de4dbc49bb57fa71a03
+      internalID: -5978420034176987729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_10
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 32
+        height: 63
+      alignment: 9
+      pivot: {x: 0.21216011, y: 0.45782536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86df2c6faaf15c34f8c53b740be07482
+      internalID: -6983395534186698193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_11
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 31
+        height: 64
+      alignment: 9
+      pivot: {x: 0.22001599, y: 0.47232288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19227538c3934a4994a84aa3f214cb9
+      internalID: 4080836301183249575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

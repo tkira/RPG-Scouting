@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeftClick : MonoBehaviour {
-    // Start is called before the first frame update
+
+    public DoorCollider dCol;
 
     //Interact variables
     public GameObject targetInteract = null;
@@ -30,7 +31,7 @@ public class LeftClick : MonoBehaviour {
                 targetedInteract = true;
                 //Set object so enable player to use specific object.
                 targetInteract = GameObject.Find (hit.collider.name);
-            } else if (hit.collider.tag == "Enemy") {
+            } else if (hit.collider.tag == "Monsters") {
                 Debug.Log ("Hit Enemy");
                 //Set bool to true to show found object
                 targetEnemyInfo = true;
@@ -51,7 +52,7 @@ public class LeftClick : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown (KeyCode.Mouse0)) {
+        if (Input.GetKeyDown (KeyCode.Mouse0) && !dCol.keyEntered) {
             ClickSelect ();
         }
     }

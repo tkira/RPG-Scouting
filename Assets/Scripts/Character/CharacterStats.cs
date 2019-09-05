@@ -33,6 +33,7 @@ public class CharacterStats : MonoBehaviour {
 
     //Dynamic Stats 
     public float characterCurrentHealth;
+    public float currentDamageOutput;
 
     //Level Up Character
     void levelUp () {
@@ -100,14 +101,14 @@ public class CharacterStats : MonoBehaviour {
 
         float defenceAdded = defence / 100 * slashingRes;
         //Check of is weak or strong against.
-        if (crushingRes > 0) {
+        if (slashingRes > 0) {
             adjustedDefence = defence + defenceAdded;
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
             }
-        } else if (crushingRes == 0) {
+        } else if (slashingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
@@ -122,14 +123,14 @@ public class CharacterStats : MonoBehaviour {
 
         float defenceAdded = defence / 100 * piercingRes;
         //Check of is weak or strong against.
-        if (crushingRes > 0) {
+        if (piercingRes > 0) {
             adjustedDefence = defence + defenceAdded;
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
             }
-        } else if (crushingRes == 0) {
+        } else if (piercingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
@@ -144,14 +145,14 @@ public class CharacterStats : MonoBehaviour {
 
         float defenceAdded = defence / 100 * explosiveRes;
         //Check of is weak or strong against.
-        if (crushingRes > 0) {
+        if (explosiveRes > 0) {
             adjustedDefence = defence + defenceAdded;
             adjustedDamage = damage - adjustedDefence;
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
             }
-        } else if (crushingRes == 0) {
+        } else if (explosiveRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
@@ -164,6 +165,9 @@ public class CharacterStats : MonoBehaviour {
     void Start () {
         //Initial set max health
         characterCurrentHealth = maxHealth;
+
+        //Current Damage is Melee to be added later for diferent swap  damage;
+        currentDamageOutput = meleeAttack;
     }
 
     // Update is called once per frame

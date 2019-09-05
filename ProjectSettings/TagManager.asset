@@ -14,6 +14,9 @@ TagManager:
   - BottomDoor
   - LeftDoor
   - RightDoor
+  - DamageMonster
+  - UI
+  - CombatUI
   layers:
   - Default
   - TransparentFX
@@ -80,4 +83,7 @@ TagManager:
     locked: 0
   - name: Icons
     uniqueID: 269309939
+    locked: 0
+  - name: Popup
+    uniqueID: 712410681
     locked: 0
