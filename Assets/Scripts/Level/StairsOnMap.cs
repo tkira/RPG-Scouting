@@ -9,10 +9,10 @@ public class StairsOnMap : MonoBehaviour {
 
     void Start () {
 
-        float y = (0.0313f * transform.position.y) + 3;
-        float x = (0.0313f * transform.position.x) + 5.5f;
-        GameObject mapS = Instantiate (mapStairs, new Vector3 (x, y, 0), Quaternion.identity);
+        GameObject mapS = Instantiate (mapStairs, transform.position, Quaternion.identity);
         mapS.transform.SetParent (GameObject.FindGameObjectWithTag ("MapGUI").transform, false);
+
+        transform.position = new Vector3 ((0.0313f * transform.position.x) + 5.5f, (0.0313f * transform.position.y) + 3, 0);
     }
 
     // Update is called once per frame

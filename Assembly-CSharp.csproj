@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Level\RoomNotSpawner.cs" />
      <Compile Include="Assets\Scripts\Level\RoomSpawner.cs" />
      <Compile Include="Assets\Scripts\Level\RoomTemplates.cs" />
+     <Compile Include="Assets\Scripts\Level\SetMiniMapPos.cs" />
      <Compile Include="Assets\Scripts\Level\SpriteColour.cs" />
      <Compile Include="Assets\Scripts\Level\StairsOnMap.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterHealthBar.cs" />
