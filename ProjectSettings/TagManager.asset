@@ -63,6 +63,9 @@ TagManager:
   - name: Doors
     uniqueID: 3081099645
     locked: 0
+  - name: XtraWalls
+    uniqueID: 3496741831
+    locked: 0
   - name: Symbols
     uniqueID: 1175433679
     locked: 0
@@ -74,6 +77,9 @@ TagManager:
     locked: 0
   - name: MapRooms
     uniqueID: 973798151
+    locked: 0
+  - name: Map Treasure
+    uniqueID: 4112554675
     locked: 0
   - name: MapSymbols
     uniqueID: 712738761

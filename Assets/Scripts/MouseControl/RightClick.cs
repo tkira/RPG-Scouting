@@ -31,12 +31,12 @@ public class RightClick : MonoBehaviour {
     }
 
     public void teleportToNewPositionT () {
-        transform.position = new Vector3 (transform.position.x, transform.position.y + 4, transform.position.z);
+        transform.position = new Vector3 (transform.position.x, transform.position.y + 6, transform.position.z);
         StartCoroutine (Wait (transform.position));
         stop ();
     }
     public void teleportToNewPositionB () {
-        transform.position = new Vector3 (transform.position.x, transform.position.y - 4, transform.position.z);
+        transform.position = new Vector3 (transform.position.x, transform.position.y - 6, transform.position.z);
         StartCoroutine (Wait (transform.position));
         stop ();
     }

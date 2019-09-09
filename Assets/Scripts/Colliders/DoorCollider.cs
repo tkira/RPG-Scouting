@@ -125,7 +125,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Rtrigger == true && keyEntered == true) {
+        else if (Rtrigger == true && keyEntered == true) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
@@ -138,7 +138,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Ltrigger == true && keyEntered == true) {
+        else if (Ltrigger == true && keyEntered == true) {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
@@ -151,7 +151,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Btrigger == true && keyEntered == true) {
+        else if (Btrigger == true && keyEntered == true) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
@@ -163,6 +163,9 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
+        }
+        else{
+            keyEntered = false;
         }
     }
 
