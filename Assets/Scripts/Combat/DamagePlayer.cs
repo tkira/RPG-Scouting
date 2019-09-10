@@ -8,8 +8,7 @@ public class DamagePlayer : MonoBehaviour {
     public bool crushDamageType;
     public bool explosiveDamageType;
 
-    public int damage;
-
+    public MonstersStats monsterStats;
     public CharacterStats characterStats;
 
     //Deal Damage and deal damage based on type;
@@ -17,13 +16,13 @@ public class DamagePlayer : MonoBehaviour {
         if (col.gameObject.tag == "Player") {
             characterStats = col.gameObject.GetComponent<CharacterStats>();
             if (slashDamageType) {
-                characterStats.takeSlashingDamage(damage);
+                characterStats.takeSlashingDamage(monsterStats.meleeAttack);
             } else if (pierceDamageType) {
-                characterStats.takePiercingDamage(damage);
+                characterStats.takePiercingDamage(monsterStats.meleeAttack);
             } else if (crushDamageType) {
-                characterStats.takeCrushingDamage(damage);
+                characterStats.takeCrushingDamage(monsterStats.meleeAttack);
             } else if (explosiveDamageType) {
-                characterStats.takeExplosiveDamage(damage);
+                characterStats.takeExplosiveDamage(monsterStats.meleeAttack);
             }
         }
     }

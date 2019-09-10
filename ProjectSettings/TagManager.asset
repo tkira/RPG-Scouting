@@ -28,9 +28,9 @@ TagManager:
   - 
   - Door
   - Player
-  - 
-  - 
-  - 
+  - Wall
+  - Monster
+  - PlayerWall
   - 
   - 
   - 

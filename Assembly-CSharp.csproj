@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Combat\AttackEnemy.cs" />
      <Compile Include="Assets\Scripts\Combat\DamageMonsters.cs" />
      <Compile Include="Assets\Scripts\Combat\DamagePlayer.cs" />
+     <Compile Include="Assets\Scripts\Combat\DamagePlayerRange.cs" />
      <Compile Include="Assets\Scripts\Combat\PlayerDetectMonster.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
      <Compile Include="Assets\Scripts\Level\AddRoom.cs" />
@@ -71,6 +72,8 @@
      <Compile Include="Assets\Scripts\Level\SetMiniMapPos.cs" />
      <Compile Include="Assets\Scripts\Level\SpriteColour.cs" />
      <Compile Include="Assets\Scripts\Level\StairsOnMap.cs" />
+     <Compile Include="Assets\Scripts\Monster\MonsterAI.cs" />
+     <Compile Include="Assets\Scripts\Monster\MonsterCombatDetect.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterHealthBar.cs" />
      <Compile Include="Assets\Scripts\Monster\MonstersStats.cs" />
      <Compile Include="Assets\Scripts\Monster\RangedEnemy.cs" />

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3266422716407879899}
   - component: {fileID: 3266422716407879900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3266422716446210891}
   - component: {fileID: 3266422716446210892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3266422716534930612}
   - component: {fileID: 3266422716534930613}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3266422716956054539}
   - component: {fileID: 3266422716956054540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3266422717494998369}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
