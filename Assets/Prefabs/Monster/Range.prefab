@@ -125,7 +125,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1290698243
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dfed14b1b54c4084b9d822b0c6874dcd, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1384666085564509865}
   - component: {fileID: 1384666085564509867}
   - component: {fileID: 1384666085564509864}
+  - component: {fileID: 1701255371}
   m_Layer: 0
   m_Name: Range
   m_TagString: Monsters
@@ -179,9 +180,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384666085564509861}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.38, y: -1.77, z: 0}
-  m_LocalScale: {x: 0.6483003, y: 0.6483003, z: 0.6483003}
+  m_LocalScale: {x: 0.3629963, y: 0.3629963, z: 0.3629963}
   m_Children:
   - {fileID: 1384666085200253487}
   - {fileID: 1384666084674050701}
@@ -204,10 +205,12 @@ MonoBehaviour:
   Player: {fileID: 0}
   moveSpeed: 1
   MinDist: 5
+  MaxDist: 9
   inRangeOfPlayer: 0
   monStats: {fileID: 1384666085564509867}
   rangedMonster: 1
   meleeMonster: 0
+  meleeAttackHitbox: {fileID: 0}
   bullet: {fileID: 8015339464796795849, guid: 18158b0fffe12234185053fcb58ca6b6, type: 3}
   bulletSpawn: {fileID: 1384666085752509905}
 --- !u!212 &1384666085564509865
@@ -246,7 +249,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1304438493
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 63e2be6d9b5824f4d975dd9b59b822f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -275,7 +278,7 @@ MonoBehaviour:
   maxHealth: 1000
   defence: 10
   meleeAttack: 0
-  rangeAttack: 20
+  rangeAttack: 100
   attackSpeed: 2
   moveSpeed: 0
   crushingRes: 0
@@ -311,6 +314,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3569206, y: 1.6467953}
   m_EdgeRadius: 0
+--- !u!50 &1701255371
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384666085564509861}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1384666085752509904
 GameObject:
   m_ObjectHideFlags: 0

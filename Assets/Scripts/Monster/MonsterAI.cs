@@ -7,7 +7,7 @@
 
      public Transform Player;
      public float moveSpeed;
-     public float MinDist;
+     public float MinDist;     public float MaxDist;
      public bool inRangeOfPlayer;
      public MonstersStats monStats;
      public bool rangedMonster;
@@ -17,6 +17,7 @@
      void Start () {
          attackDelay = false;
          setScale = transform.localScale;
+         Player = GameObject.FindGameObjectWithTag ("Player").transform;
      }
 
      void Update () {
@@ -32,7 +33,7 @@
 
          }
 
-         if (Vector3.Distance (transform.position, Player.position) >= MinDist && !inRangeOfPlayer) {
+         if (Vector3.Distance (transform.position, Player.position) >= MinDist && !inRangeOfPlayer && Vector3.Distance (transform.position, Player.position) <= MaxDist) {
              transform.position = Vector2.MoveTowards (transform.position, Player.position, moveSpeed * Time.deltaTime);
              inRangeOfPlayer = false;
          }

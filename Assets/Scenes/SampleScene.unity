@@ -132,18 +132,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 366057808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &42141152 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5904001529912374278, guid: 812ee2f687ec3e6499c8157463d6df63,
-    type: 3}
-  m_PrefabInstance: {fileID: 366057808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed215245f58c10949842f0c30fb2463d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &48377413
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac38216213b6d6d4391579ac69c1ff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 7762639448506590507, guid: 0af0419b1154b1647b7918aa8f70ea2a, type: 3}
+  monster: {fileID: 5904001529912374274, guid: 812ee2f687ec3e6499c8157463d6df63, type: 3}
   chest: {fileID: 4672476073499135954, guid: a28ba8d90a9b4194cbc49af41408adc6, type: 3}
   mapChest: {fileID: 8602698662491709002, guid: bee1bc7ff48c54f49b742d34efc6172b,
     type: 3}
@@ -1072,56 +1060,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5904001529912374275, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.62674636
-      objectReference: {fileID: 0}
-    - target: {fileID: 5904001529912374275, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.62674636
-      objectReference: {fileID: 0}
-    - target: {fileID: 5904001529912374275, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.62674636
-      objectReference: {fileID: 0}
-    - target: {fileID: 5904001529912374279, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: monStats
-      value: 
-      objectReference: {fileID: 42141152}
-    - target: {fileID: 5904001529912374279, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: meleeMonster
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5904001529912374279, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1484819363}
-    - target: {fileID: 5904001529912374279, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: MinDist
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5904001529912374279, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: meleeAttackHitbox
-      value: 
-      objectReference: {fileID: 1818351189}
-    - target: {fileID: 5904001529912374278, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: attackSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5904001528980225559, guid: 812ee2f687ec3e6499c8157463d6df63,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 812ee2f687ec3e6499c8157463d6df63, type: 3}
 --- !u!4 &397416696 stripped
@@ -3216,31 +3159,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1384666085564509866, guid: 39a26bd65951f7547ae8c940e9a08cfe,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3629963
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384666085564509866, guid: 39a26bd65951f7547ae8c940e9a08cfe,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3629963
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384666085564509866, guid: 39a26bd65951f7547ae8c940e9a08cfe,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3629963
-      objectReference: {fileID: 0}
     - target: {fileID: 1384666085564509870, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1484819363}
-    - target: {fileID: 1384666085564509867, guid: 39a26bd65951f7547ae8c940e9a08cfe,
-        type: 3}
-      propertyPath: rangeAttack
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a26bd65951f7547ae8c940e9a08cfe, type: 3}
 --- !u!4 &1291033489 stripped
@@ -4257,12 +4180,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4315221381822536984, guid: 7b6666940939e8047bb4aea71b2bde24,
     type: 3}
   m_PrefabInstance: {fileID: 507829508}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1818351189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5904001528980225559, guid: 812ee2f687ec3e6499c8157463d6df63,
-    type: 3}
-  m_PrefabInstance: {fileID: 366057808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840377903
 GameObject:
