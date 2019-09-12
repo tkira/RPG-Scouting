@@ -17,6 +17,10 @@ TagManager:
   - DamageMonster
   - UI
   - CombatUI
+  - Bardoor
+  - Blacksmithdoor
+  - Dungeondoor
+  - Insidebar
   layers:
   - Default
   - TransparentFX
