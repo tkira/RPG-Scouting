@@ -495,11 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1e576872aa94b62aa5a02eb39f46ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resume: {fileID: 1209287280}
-  Controls: {fileID: 1426092511}
-  Options: {fileID: 439225520}
-  Return: {fileID: 219489163}
-  Confirm: {fileID: 1978343959}
 --- !u!212 &126901852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2833,6 +2828,7 @@ MonoBehaviour:
   Bardoor: 0
   Blacksmithdoor: 0
   Dungeondoor: 0
+  Insidebar: 0
   rcPlayer: {fileID: 1484819364}
   speed: 10
   uiElement: {fileID: 130456422}
