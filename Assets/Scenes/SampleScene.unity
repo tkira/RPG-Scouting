@@ -1507,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 5904001529912374274, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5904001529912374275, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
@@ -1572,17 +1572,27 @@ PrefabInstance:
     - target: {fileID: 5904001528980225559, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5904001528980225559, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5904001528980225559, guid: 812ee2f687ec3e6499c8157463d6df63,
+        type: 3}
+      propertyPath: m_Name
+      value: CombatDamageCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5904001529401198101, guid: 812ee2f687ec3e6499c8157463d6df63,
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904001529912374276, guid: 812ee2f687ec3e6499c8157463d6df63,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 14821268, guid: 812ee2f687ec3e6499c8157463d6df63, type: 3}
@@ -4001,6 +4011,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3809379663936564046, guid: 54a3986eb05954644bce0cba7d230378,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809379663982217438, guid: 54a3986eb05954644bce0cba7d230378,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809379664063860519, guid: 54a3986eb05954644bce0cba7d230378,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809379664416581534, guid: 54a3986eb05954644bce0cba7d230378,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a3986eb05954644bce0cba7d230378, type: 3}
 --- !u!1 &1267788135
@@ -4076,7 +4106,7 @@ PrefabInstance:
     - target: {fileID: 1384666085564509861, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1384666085564509866, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
@@ -4141,7 +4171,7 @@ PrefabInstance:
     - target: {fileID: 1384666084674050700, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1384666085200253486, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
@@ -4151,11 +4181,67 @@ PrefabInstance:
     - target: {fileID: 1384666085752509904, guid: 39a26bd65951f7547ae8c940e9a08cfe,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384666085564509865, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7050993540882883828, guid: 55b07133ef98c2c4492cda17c94f341e,
+        type: 3}
+    - target: {fileID: 1384666085564509864, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384666085564509864, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.57524437
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384666085564509864, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5636454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384666085564509864, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384666085564509864, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.921875
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1701255371, guid: 39a26bd65951f7547ae8c940e9a08cfe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39a26bd65951f7547ae8c940e9a08cfe, type: 3}
+--- !u!1 &1274218711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1384666085564509861, guid: 39a26bd65951f7547ae8c940e9a08cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1274218710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1274218712
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274218711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb5b1fae617320947be1f7d80064b2d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1291033489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315221381822536984, guid: 7b6666940939e8047bb4aea71b2bde24,
@@ -4284,7 +4370,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1352800938}
   - component: {fileID: 1352800939}
-  m_Layer: 9
+  - component: {fileID: 1352800940}
+  m_Layer: 11
   m_Name: WallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4331,6 +4418,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5500274, y: 0.6092839}
   m_EdgeRadius: 0
+--- !u!50 &1352800940
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352800937}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.20588832
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1356483070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,8 +4827,8 @@ GameObject:
   - component: {fileID: 1484819366}
   - component: {fileID: 1484819365}
   - component: {fileID: 1484819364}
-  - component: {fileID: 1484819369}
   - component: {fileID: 1484819370}
+  - component: {fileID: 1484819369}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -4916,7 +5024,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.020640671, y: -0.0051602125}

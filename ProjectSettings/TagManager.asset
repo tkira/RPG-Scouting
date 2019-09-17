@@ -32,10 +32,10 @@ TagManager:
   - 
   - Door
   - Player
-  - Monsters
-  - 
-  - 
-  - 
+  - MonstersWall
+  - PlayerWall
+  - Wall
+  - Monster
   - 
   - 
   - 

@@ -85,10 +85,10 @@ public class PlayerDetectMonster : MonoBehaviour {
     }
 
     //Stop if hit enemy;
-    private void OnCollisionEnter2D (Collision2D col) {
+    void OnTriggerEnter2D (Collider2D col) {
         if (col.gameObject.tag == "Monsters") {
-            Debug.Log("STOPPP");
-            rcCharacter.stop();
+            Debug.Log ("STOPPP");
+            rcCharacter.stop ();
         }
     }
 }
