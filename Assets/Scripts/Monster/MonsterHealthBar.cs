@@ -6,6 +6,7 @@ public class MonsterHealthBar : MonoBehaviour {
 
 	Vector3 localScale;
 	public MonstersStats monStats; 
+	public float Xscale;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class MonsterHealthBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float scale = 1f / 100;
+		float scale = Xscale / 100;
 		float curHealth = (monStats.monsterCurrentHealth / monStats.maxHealth) * 100;
 		float currentPercent = scale * curHealth;
 		localScale.x = currentPercent;

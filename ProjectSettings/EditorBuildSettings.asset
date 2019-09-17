@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Bar.unity
+    guid: 667f6ac64567e418d991689765c5c775
+  - enabled: 1
+    path: Assets/Scenes/Blacksmith.unity
+    guid: e23401a60b80d4e10aa29487fd0ad2af
+  - enabled: 1
+    path: Assets/Scenes/Ingamemenu.unity
+    guid: c87de6d4c52c144988455139c7d0e369
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: 560419d98ca162c4189c577c99bd6744
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: fa781798a77714dd39854d943d910e8f
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 37f7799d0a5624df0ae335b5dbe18955
   m_configObjects: {}

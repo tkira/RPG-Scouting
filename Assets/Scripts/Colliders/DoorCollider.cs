@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class DoorCollider : MonoBehaviour {
 
     public GameObject interactIcon;
@@ -14,6 +14,11 @@ public class DoorCollider : MonoBehaviour {
     public bool Rtrigger = false;
     public bool Ltrigger = false;
     public bool keyEntered = false;
+    //---Town
+    public bool Bardoor = false;
+    public bool Blacksmithdoor = false;
+    public bool Dungeondoor = false;
+    public bool Insidebar = false;
     //Enable object if in range
 
     public RightClick rcPlayer;
@@ -21,8 +26,32 @@ public class DoorCollider : MonoBehaviour {
     void Start () {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
     }
+    
+    
 
     void OnTriggerEnter2D (Collider2D col) {
+        //-----Town door icon/trigger
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar")
+        {
+            interactIcon.SetActive(true);
+            if (col.gameObject.tag == "Bardoor")
+            {
+                Bardoor = true;
+            }
+            if (col.gameObject.tag == "Insidebar")
+            {
+                Insidebar = true;
+            }
+            if (col.gameObject.tag == "Blacksmithdoor")
+            {
+                Blacksmithdoor = true;
+            }
+            if (col.gameObject.tag == "Dungeondoor")
+            {
+                Dungeondoor = true;
+            }
+
+        }
         //-----interactable icons
         if (col.gameObject.tag == "Interact") {
             interactIcon.SetActive (true);
@@ -63,6 +92,28 @@ public class DoorCollider : MonoBehaviour {
     void OnTriggerExit2D (Collider2D col) {
         if (col.gameObject.tag == "Interact") {
             interactIcon.SetActive (false);
+        }
+        //---- Town door icon/trigger
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar")
+        {
+            interactIcon.SetActive(false);
+
+            if (col.gameObject.tag == "Bardoor")
+            {
+                Bardoor = false;
+            }
+            if (col.gameObject.tag == "Insidebar")
+            {
+                Insidebar = false;
+            }
+            if (col.gameObject.tag == "Blacksmithdoor")
+            {
+                Blacksmithdoor = false;
+            }
+            if (col.gameObject.tag == "Dungeondoor")
+            {
+                Dungeondoor = false;
+            }
         }
         //-----Door icon & triggers
         if (col.gameObject.tag == "TopDoor") {
@@ -106,12 +157,32 @@ public class DoorCollider : MonoBehaviour {
     Vector3 startPos;
     public float speed;
     // Update is called once per frame
-    void Update () {
+    public void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && !keyEntered) {
             keyEntered = true;
             startPos = camera.transform.position;
         }
-
+        //----Town scene change
+        if (keyEntered == true)
+        {
+            if (Insidebar == true)
+            {
+                SceneManager.LoadScene("Town");
+            }
+            if (Bardoor == true)
+            {
+                SceneManager.LoadScene("Bar");
+            }
+            if (Dungeondoor == true)
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+            if (Blacksmithdoor == true)
+            {
+                SceneManager.LoadScene("Blacksmith");
+            }
+        }
+        //----
         if (Ttrigger == true && keyEntered == true) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y + 9f, startPos.z), speed * Time.deltaTime);
@@ -125,7 +196,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Rtrigger == true && keyEntered == true) {
+        else if (Rtrigger == true && keyEntered == true) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
@@ -138,7 +209,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Ltrigger == true && keyEntered == true) {
+        else if (Ltrigger == true && keyEntered == true) {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
@@ -151,7 +222,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        if (Btrigger == true && keyEntered == true) {
+        else if (Btrigger == true && keyEntered == true) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
@@ -163,6 +234,9 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
+        }
+        else{
+            keyEntered = false;
         }
     }
 
