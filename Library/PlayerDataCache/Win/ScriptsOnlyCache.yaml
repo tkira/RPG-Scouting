@@ -16,9 +16,11 @@ ScriptsOnlyBuild:
     - Menu
     - MonsterAI
     - MonsterHealthBar
+    - MonsterTakeDamage
     - MonsterTemplates
     - MonstersStats
     - PlayerDetectMonster
+    - PlayerTakeDamage
     - PopupDamageEnemy
     - Projectile
     - RightClick
@@ -93,21 +95,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10634}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 11032}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 14472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -157,15 +159,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11632}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 14472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -202,15 +204,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11632}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 14472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -279,61 +281,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10322}
+      Script: {instanceID: 10250}
     - Class: 114
       Script: {instanceID: 10324}
     - Class: 114
-      Script: {instanceID: 10342}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10364}
+      Script: {instanceID: 10350}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10366}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10634}
     - Class: 114
-      Script: {instanceID: 10834}
+      Script: {instanceID: 10640}
     - Class: 114
-      Script: {instanceID: 10910}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10838}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 11012}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 11032}
+      Script: {instanceID: 10960}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11016}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 11632}
+    - Class: 114
+      Script: {instanceID: 11666}
+    - Class: 114
+      Script: {instanceID: 14472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -388,29 +394,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10324}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10634}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 11032}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11632}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 14472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -572,7 +578,7 @@ ScriptsOnlyBuild:
     className: AlreadyRoomHere
   - hash:
       serializedVersion: 2
-      Hash: fb2ebf9ca0c82688299adac0c9f6260f
+      Hash: 4a3240467100062c62aafc627e9a5431
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DamagePlayerRange
@@ -642,6 +648,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 2239f0db361aa34d1e135713671163db
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MonsterTakeDamage
   - hash:
       serializedVersion: 2
       Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
@@ -732,6 +744,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark01
+  - hash:
+      serializedVersion: 2
+      Hash: 7c230578656d9750cd3bfac8dc005551
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTakeDamage
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -962,7 +980,7 @@ ScriptsOnlyBuild:
     className: TMP_FrameRateCounter
   - hash:
       serializedVersion: 2
-      Hash: b6bb1b3a22e19bf9ab3b90b979c79457
+      Hash: b53e26ac0dcf9f546c67944870077836
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DamageMonsters
@@ -1142,7 +1160,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: fb2ebf9ca0c82688299adac0c9f6260f
+      Hash: 4a3240467100062c62aafc627e9a5431
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DamagePlayer
@@ -1238,4 +1256,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Ingamemenu.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Town.unity
-  playerPath: C:/Users/tungd/Documents/Unity Project/Ouput/Random dungeon.exe
+  playerPath: C:/Users/tungd/Documents/Unity Project/Output/Random dungeon.exe

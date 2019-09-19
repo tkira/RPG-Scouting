@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\Combat\DamageMonsters.cs" />
      <Compile Include="Assets\Scripts\Combat\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\Combat\DamagePlayerRange.cs" />
+     <Compile Include="Assets\Scripts\Combat\MonsterTakeDamage.cs" />
      <Compile Include="Assets\Scripts\Combat\PlayerDetectMonster.cs" />
+     <Compile Include="Assets\Scripts\Combat\PlayerTakeDamage.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
      <Compile Include="Assets\Scripts\Level\AddRoom.cs" />
      <Compile Include="Assets\Scripts\Level\AlreadyRoomHere.cs" />

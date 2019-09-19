@@ -9,21 +9,22 @@ public class DamagePlayerRange : MonoBehaviour {
     public bool explosiveDamageType;
 
     public MonstersStats monsterStats;
-    public CharacterStats characterStats;
+    public PlayerTakeDamage pTd;
 
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D col) {
-        if (col.gameObject.tag == "Player") {
-            characterStats = col.gameObject.GetComponent<CharacterStats>();
+        if (col.gameObject.tag == "PlayerHitbox") {
+            pTd = col.gameObject.GetComponent<PlayerTakeDamage> ();
             if (slashDamageType) {
-                characterStats.takeSlashingDamage(monsterStats.rangeAttack);
+                pTd.dealSlashingDamage (monsterStats.rangeAttack);
             } else if (pierceDamageType) {
-                characterStats.takePiercingDamage(monsterStats.rangeAttack);
+                pTd.dealPiercingDamage (monsterStats.rangeAttack);
             } else if (crushDamageType) {
-                characterStats.takeCrushingDamage(monsterStats.rangeAttack);
+                pTd.dealCrushingDamage (monsterStats.rangeAttack);
             } else if (explosiveDamageType) {
-                characterStats.takeExplosiveDamage(monsterStats.rangeAttack);
+                pTd.dealExplosiveDamage (monsterStats.rangeAttack);
             }
+            Destroy (gameObject);
         }
     }
 }

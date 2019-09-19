@@ -31,7 +31,6 @@ public class PlayerDetectMonster : MonoBehaviour {
             //set false of no enemies found.
             inRangeEnemy = false;
         }
-
     }
 
     public GameObject[] monsters;
@@ -84,10 +83,8 @@ public class PlayerDetectMonster : MonoBehaviour {
         return closest;
     }
 
-    //Stop if hit enemy;
     void OnTriggerEnter2D (Collider2D col) {
-        if (col.gameObject.tag == "Monsters") {
-            Debug.Log ("STOPPP");
+        if (col.gameObject.tag == "MonsterHitbox") {
             rcCharacter.stop ();
         }
     }
