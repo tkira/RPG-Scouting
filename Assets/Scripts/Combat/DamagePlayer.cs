@@ -9,20 +9,20 @@ public class DamagePlayer : MonoBehaviour {
     public bool explosiveDamageType;
 
     public MonstersStats monsterStats;
-    public CharacterStats characterStats;
+    public PlayerTakeDamage pTd;
 
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D col) {
-        if (col.gameObject.tag == "Player") {
-            characterStats = col.gameObject.GetComponent<CharacterStats>();
+        if (col.gameObject.tag == "PlayerHitbox") {
+            pTd = col.gameObject.GetComponent<PlayerTakeDamage>();
             if (slashDamageType) {
-                characterStats.takeSlashingDamage(monsterStats.meleeAttack);
+                pTd.dealSlashingDamage(monsterStats.meleeAttack);
             } else if (pierceDamageType) {
-                characterStats.takePiercingDamage(monsterStats.meleeAttack);
+                pTd.dealPiercingDamage(monsterStats.meleeAttack);
             } else if (crushDamageType) {
-                characterStats.takeCrushingDamage(monsterStats.meleeAttack);
+                pTd.dealCrushingDamage(monsterStats.meleeAttack);
             } else if (explosiveDamageType) {
-                characterStats.takeExplosiveDamage(monsterStats.meleeAttack);
+                pTd.dealExplosiveDamage(monsterStats.meleeAttack);
             }
         }
     }

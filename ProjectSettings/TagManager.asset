@@ -21,6 +21,9 @@ TagManager:
   - Blacksmithdoor
   - Dungeondoor
   - Insidebar
+  - PlayerHitbox
+  - MonsterHitbox
+  - PlayerCombat
   layers:
   - Default
   - TransparentFX
@@ -32,10 +35,10 @@ TagManager:
   - 
   - Door
   - Player
-  - MonstersWall
+  - MonsterWall
   - PlayerWall
   - Wall
-  - Monster
+  - 
   - 
   - 
   - 
