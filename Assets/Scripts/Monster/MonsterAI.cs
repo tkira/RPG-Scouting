@@ -14,10 +14,13 @@
      public bool meleeMonster;
      Vector3 setScale;
 
+     public Animator aniMon;
+
      void Start () {
          attackDelay = false;
          setScale = transform.localScale;
          Player = GameObject.FindGameObjectWithTag ("Player").transform;
+         aniMon = gameObject.GetComponent<Animator>();
      }
 
      void Update () {
