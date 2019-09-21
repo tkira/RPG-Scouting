@@ -15,20 +15,17 @@ public class Projectile : MonoBehaviour {
         // Calculate the distance between the destination and the farmer.
         Vector3 distance = player.position - transform.position;
 
-        // Calculate the angel between them.
-        float angle = Mathf.Atan2 (distance.y, distance.x);
+        // Calculate the angle between them.
+        float angle = Mathf.Atan2 (distance.y, distance.x) * Mathf.Rad2Deg;
 
-        // Make the angle a bit larger.
-        angle *= 20;
-        // And round it to zero if it's too small.
-        if (Mathf.Abs (angle) < 1)
-            angle = 0;
-        transform.rotation = Quaternion.Euler (0f, 0f, angle);
+        transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+
     }
 
     void Update () {
         //Go towards player last postion
         transform.position = Vector2.MoveTowards (transform.position, target, speed * Time.deltaTime);
+
         //Destroy upon reaching
         if (transform.position.x == target.x && transform.position.y == target.y) {
             DestroyProjectile ();
@@ -37,7 +34,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D (Collider2D other) {
         //If hit, destroy
-        
+
     }
 
     void DestroyProjectile () {
