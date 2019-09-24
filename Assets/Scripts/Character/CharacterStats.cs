@@ -85,12 +85,14 @@ public class CharacterStats : MonoBehaviour {
             //This is to prevent dealing minus damage because of defence higher than damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         }
     }
@@ -107,12 +109,14 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         } else if (slashingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         }
     }
@@ -129,12 +133,14 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         } else if (piercingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         }
     }
@@ -151,12 +157,14 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         } else if (explosiveRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
+                popupDamge (adjustedDamage);
             }
         }
     }
@@ -175,5 +183,12 @@ public class CharacterStats : MonoBehaviour {
         if (characterCurrentHealth <= 0){
             Destroy(gameObject);
         }
+    }
+
+        public GameObject popupDam;
+    void popupDamge (float dam) {
+        GameObject popup = Instantiate (popupDam, transform.position, Quaternion.Euler (Vector3.zero));
+        popup.transform.SetParent (GameObject.FindGameObjectWithTag ("CombatUI").transform, false);
+        popup.GetComponent<PopupDamageEnemy> ().SetDamage (dam);
     }
 }
