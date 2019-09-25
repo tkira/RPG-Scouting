@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.036658272, y: 0.01832959}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.70673347, y: 0.7433912}
   m_EdgeRadius: 0
 --- !u!1 &4111242683298154714
 GameObject:
@@ -357,6 +357,7 @@ MonoBehaviour:
   monStats: {fileID: 7557369393881158325}
   rangedMonster: 0
   meleeMonster: 1
+  aniMon: {fileID: 0}
   meleeAttackHitbox: {fileID: 7557369393521531044}
   bullet: {fileID: 0}
   bulletSpawn: {fileID: 0}
@@ -453,6 +454,6 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4

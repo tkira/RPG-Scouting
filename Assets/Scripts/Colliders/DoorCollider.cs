@@ -22,9 +22,11 @@ public class DoorCollider : MonoBehaviour {
     //Enable object if in range
 
     public RightClick rcPlayer;
+    private MonsterTemplates monstersTemplates;
 
     void Start () {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
+        monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
     }
     
     
@@ -58,28 +60,28 @@ public class DoorCollider : MonoBehaviour {
         }
 
         //-----Door icon & triggers
-        if (col.gameObject.tag == "TopDoor") {
+        if (col.gameObject.tag == "TopDoor" && !monstersTemplates.doorClosed) {
             DoorIcon.SetActive (true);
             if (!keyEntered) {
                 Ttrigger = true;
             }
             rcPlayer.stop ();
         }
-        if (col.gameObject.tag == "RightDoor") {
+        if (col.gameObject.tag == "RightDoor" && !monstersTemplates.doorClosed) {
             if (!keyEntered) {
                 Rtrigger = true;
             }
             DoorIcon.SetActive (true);
             rcPlayer.stop ();
         }
-        if (col.gameObject.tag == "BottomDoor") {
+        if (col.gameObject.tag == "BottomDoor" && !monstersTemplates.doorClosed) {
             if (!keyEntered) {
                 Btrigger = true;
             }
             DoorIcon.SetActive (true);
             rcPlayer.stop ();
         }
-        if (col.gameObject.tag == "LeftDoor") {
+        if (col.gameObject.tag == "LeftDoor" && !monstersTemplates.doorClosed) {
             if (!keyEntered) {
                 Ltrigger = true;
             }
@@ -183,7 +185,7 @@ public class DoorCollider : MonoBehaviour {
             }
         }
         //----
-        if (Ttrigger == true && keyEntered == true) {
+        if (Ttrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y + 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y + 9f, startPos.z)) {
@@ -196,7 +198,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        else if (Rtrigger == true && keyEntered == true) {
+        else if (Rtrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
@@ -209,7 +211,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        else if (Ltrigger == true && keyEntered == true) {
+        else if (Ltrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
@@ -222,7 +224,7 @@ public class DoorCollider : MonoBehaviour {
                 Ttrigger = false;
             }
         }
-        else if (Btrigger == true && keyEntered == true) {
+        else if (Btrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
