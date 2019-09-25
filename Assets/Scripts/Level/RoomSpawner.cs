@@ -141,24 +141,6 @@ public class RoomSpawner : MonoBehaviour {
                 newObject.GetComponentInChildren<AlreadyRoomHere> ().spawnVal = changeChecker;
                 spawned = true;
 
-                int rand2 = Random.Range (0, 30);
-                if (rand2 % 2 == 0) {
-                    Debug.Log ("Spawn Monster");
-                    Instantiate (monstersTemplates.monster, new Vector3 (newObject.transform.position.x + 3.5f, newObject.transform.position.y + 1.5f, 0), Quaternion.identity);
-                }
-                if (rand2 % 3 == 0) {
-                    Debug.Log ("Spawn Monster");
-                    Instantiate (monstersTemplates.monster, new Vector3 (newObject.transform.position.x - 3.5f, newObject.transform.position.y - 1.5f, 0), Quaternion.identity);
-                }
-                if (rand2 % 5 == 0) {
-                    Debug.Log ("Spawn Monster");
-                    Instantiate (monstersTemplates.monster, new Vector3 (newObject.transform.position.x + 3.5f, newObject.transform.position.y - 1.5f, 0), Quaternion.identity);
-                }
-                if (rand2 % 10 == 0) {
-                    Debug.Log ("Spawn Monster");
-                    Instantiate (monstersTemplates.monster, new Vector3 (newObject.transform.position.x - 3.5f, newObject.transform.position.y + 1.5f, 0), Quaternion.identity);
-                }
-
                 int rand3 = Random.Range (0, 10);
                 if (rand3 == 0) {
                     Debug.Log ("Spawn Monster");

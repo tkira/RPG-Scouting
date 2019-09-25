@@ -169,6 +169,11 @@ public class CharacterStats : MonoBehaviour {
         }
     }
 
+    public void healToFull(){
+        characterCurrentHealth = maxHealth;
+        popupDamge (maxHealth);
+    }
+
     // Start is called before the first frame update
     void Start () {
         //Initial set max health
