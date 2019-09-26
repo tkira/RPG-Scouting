@@ -14,7 +14,6 @@ public class DamageMonsters : MonoBehaviour {
 
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D other) {
-        Debug.Log("hit monsters");
         if (other.gameObject.tag == "MonsterHitbox" ) {
             mTd = other.gameObject.GetComponent<MonsterTakeDamage> ();
             if (slashDamageType) {
