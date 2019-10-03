@@ -88,7 +88,9 @@
      <Compile Include="Assets\Scripts\MouseControl\InteractMouseHover.cs" />
      <Compile Include="Assets\Scripts\MouseControl\LeftClick.cs" />
      <Compile Include="Assets\Scripts\MouseControl\RightClick.cs" />
+     <Compile Include="Assets\Scripts\NPC\NPCWander.cs" />
      <Compile Include="Assets\Scripts\SceneChanger\Menu.cs" />
+     <Compile Include="Assets\Scripts\Scouting\ScoutingController.cs" />
      <Compile Include="Assets\Scripts\UI\GetInfoEnemy.cs" />
      <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
      <Compile Include="Assets\Scripts\UI\PopupDamageEnemy.cs" />
