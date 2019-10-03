@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class DoorCollider : MonoBehaviour {
 
     public GameObject interactIcon;
@@ -28,28 +28,21 @@ public class DoorCollider : MonoBehaviour {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
         monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
     }
-    
-    
 
     void OnTriggerEnter2D (Collider2D col) {
         //-----Town door icon/trigger
-        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar")
-        {
-            interactIcon.SetActive(true);
-            if (col.gameObject.tag == "Bardoor")
-            {
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar") {
+            interactIcon.SetActive (true);
+            if (col.gameObject.tag == "Bardoor") {
                 Bardoor = true;
             }
-            if (col.gameObject.tag == "Insidebar")
-            {
+            if (col.gameObject.tag == "Insidebar") {
                 Insidebar = true;
             }
-            if (col.gameObject.tag == "Blacksmithdoor")
-            {
+            if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = true;
             }
-            if (col.gameObject.tag == "Dungeondoor")
-            {
+            if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = true;
             }
 
@@ -96,24 +89,19 @@ public class DoorCollider : MonoBehaviour {
             interactIcon.SetActive (false);
         }
         //---- Town door icon/trigger
-        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar")
-        {
-            interactIcon.SetActive(false);
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar") {
+            interactIcon.SetActive (false);
 
-            if (col.gameObject.tag == "Bardoor")
-            {
+            if (col.gameObject.tag == "Bardoor") {
                 Bardoor = false;
             }
-            if (col.gameObject.tag == "Insidebar")
-            {
+            if (col.gameObject.tag == "Insidebar") {
                 Insidebar = false;
             }
-            if (col.gameObject.tag == "Blacksmithdoor")
-            {
+            if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = false;
             }
-            if (col.gameObject.tag == "Dungeondoor")
-            {
+            if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = false;
             }
         }
@@ -159,29 +147,29 @@ public class DoorCollider : MonoBehaviour {
     Vector3 startPos;
     public float speed;
     // Update is called once per frame
+
+    public GameObject scoutingPanel;
+
     public void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && !keyEntered) {
             keyEntered = true;
             startPos = camera.transform.position;
         }
         //----Town scene change
-        if (keyEntered == true)
-        {
-            if (Insidebar == true)
-            {
-                SceneManager.LoadScene("Town");
+        if (keyEntered == true) {
+            if (Insidebar == true) {
+                SceneManager.LoadScene ("Town");
             }
-            if (Bardoor == true)
-            {
-                SceneManager.LoadScene("Bar");
+            if (Bardoor == true) {
+                SceneManager.LoadScene ("Bar");
             }
-            if (Dungeondoor == true)
-            {
-                SceneManager.LoadScene("SampleScene");
+            if (Dungeondoor == true) {
+                //SceneManager.LoadScene("SampleScene");
+                scoutingPanel.SetActive (true);
+                
             }
-            if (Blacksmithdoor == true)
-            {
-                SceneManager.LoadScene("Blacksmith");
+            if (Blacksmithdoor == true) {
+                SceneManager.LoadScene ("Blacksmith");
             }
         }
         //----
@@ -197,8 +185,7 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
-        }
-        else if (Rtrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
+        } else if (Rtrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
@@ -210,8 +197,7 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
-        }
-        else if (Ltrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
+        } else if (Ltrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
@@ -223,8 +209,7 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
-        }
-        else if (Btrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
+        } else if (Btrigger == true && keyEntered == true && !monstersTemplates.doorClosed) {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
@@ -236,8 +221,7 @@ public class DoorCollider : MonoBehaviour {
                 Rtrigger = false;
                 Ttrigger = false;
             }
-        }
-        else{
+        } else {
             keyEntered = false;
         }
     }
