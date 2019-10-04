@@ -393,6 +393,14 @@ MonoBehaviour:
   monsterCurrentHealth: 0
   popupDam: {fileID: 2795015996901281465, guid: defb17a378b98cc4ab1c7d670a7be9ac,
     type: 3}
+  Loots:
+  - {fileID: 5334113750051515537, guid: 012ae683c427d47799a6e6f4156c6059, type: 3}
+  - {fileID: 5334113750051515537, guid: 012ae683c427d47799a6e6f4156c6059, type: 3}
+  - {fileID: 8009313404917326712, guid: 2040cb3271f554b36adc03202303982f, type: 3}
+  table: 3c0000001e00000014000000
+  total: 0
+  randomNumber: 0
+  LootSpawn: {fileID: 6541035536981145815}
 --- !u!95 &5328109506283820659
 Animator:
   serializedVersion: 3

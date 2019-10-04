@@ -36,6 +36,18 @@ public class CharacterStats : MonoBehaviour {
     public float characterCurrentHealth;
     public float currentDamageOutput;
 
+    //Save
+
+    public void SavePlayer()
+    {
+        SaveManager.Save(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerStats stats = SaveManager.Load();
+        characterCurrentHealth = stats.characterCurrentHealth;
+    }
+
     //Level Up Character
     void levelUp () {
         currentLvl++;
@@ -212,6 +224,15 @@ public class CharacterStats : MonoBehaviour {
         if (characterCurrentHealth <= 0) {
             Destroy (gameObject);
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SavePlayer();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            LoadPlayer();
+        }
+
     }
 
     public GameObject popupDam;

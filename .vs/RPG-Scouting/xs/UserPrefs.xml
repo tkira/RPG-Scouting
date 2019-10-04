@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{B27C6DDD-844D-7065-0214-68879764FE5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mainmenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Monster/MonstersStats.cs">
     <Files>
-      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="21" Column="30" />
-      <File FileName="Assets/Scripts/Mainmenu.cs" Line="9" Column="30" />
-      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" Line="25" Column="17" />
+      <File FileName="Assets/Scripts/Monster/MonstersStats.cs" Line="154" Column="71" />
+      <File FileName="Assets/Scripts/Combat/DamagePlayerRange.cs" Line="21" Column="67" />
+      <File FileName="Assets/Scripts/Combat/Projectile.cs" Line="16" Column="65" />
+      <File FileName="Assets/CoinScript.cs" Line="18" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="00363378-c62a-4465-96af-aa22b019a34f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="91a80749-eaf9-40f5-81a5-1f67f8c0187a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

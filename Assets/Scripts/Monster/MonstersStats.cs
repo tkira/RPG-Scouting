@@ -54,6 +54,7 @@ public class MonstersStats : MonoBehaviour {
 
         //Destroy if no health left 
         if (monsterCurrentHealth <= 0) {
+            LootDrop();
             Destroy (gameObject);
         }
     }
@@ -83,6 +84,7 @@ public class MonstersStats : MonoBehaviour {
 
         //Destroy if no health left 
         if (monsterCurrentHealth <= 0) {
+            LootDrop();
             Destroy (gameObject);
         }
     }
@@ -112,6 +114,7 @@ public class MonstersStats : MonoBehaviour {
 
         //Destroy if no health left 
         if (monsterCurrentHealth <= 0) {
+            LootDrop();
             Destroy (gameObject);
         }
     }
@@ -141,6 +144,7 @@ public class MonstersStats : MonoBehaviour {
 
         //Destroy if no health left 
         if (monsterCurrentHealth <= 0) {
+            LootDrop();
             Destroy (gameObject);
         }
     }
@@ -157,9 +161,43 @@ public class MonstersStats : MonoBehaviour {
         //Initial set max health
         monsterCurrentHealth = maxHealth;
     }
-
+  
     // Update is called once per frame
     void Update () {
+        
+    }
+
+    //------------------------Loot Drop - i couldnt add to other script
+    public List<GameObject> Loots;
+    public int[] table = { 60, 30, 20 };
+    public int total;
+    public int randomNumber;
+    public Transform LootSpawn;
+    
+    public void LootDrop()
+    {
+
+        foreach (var item in table)
+        {
+            total += item;
+        }
+
+        randomNumber = Random.Range(0, total);
+
+        for (int i = 0; i < table.Length; i++)
+        {
+            if (randomNumber <= table[i])
+            {
+                //award
+                GameObject loot = Instantiate(Loots[i], LootSpawn.position, Quaternion.identity);
+                return;
+            }
+            else
+            {
+                randomNumber -= table[i];
+            }
+        }
+
 
     }
 }
