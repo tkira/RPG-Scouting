@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterStats : MonoBehaviour {
 
@@ -169,13 +170,36 @@ public class CharacterStats : MonoBehaviour {
         }
     }
 
-    public void healToFull(){
+    public void healToFull () {
         characterCurrentHealth = maxHealth;
         popupDamge (maxHealth);
     }
 
+    public GlobalVariablesController gvc;
+
     // Start is called before the first frame update
     void Start () {
+        if (SceneManager.GetActiveScene ().name == "Dungeon") {
+            //Get Tranfered character stats
+            gvc = GameObject.Find ("GlobalVariables").GetComponent<GlobalVariablesController> ();
+            currentLvl = gvc.currentLvl;
+            currentExp = gvc.currentExp;
+            expNeedToLvl = gvc.expNeedToLvl;
+            totalExp = gvc.totalExp;
+            vitality = gvc.vitality;
+            maxHealth = gvc.maxHealth;
+            defence = gvc.defence;
+            meleeAttack = gvc.meleeAttack;
+            rangeAttack = gvc.rangeAttack;
+            attackSpeed = gvc.attackSpeed;
+            moveSpeed = gvc.moveSpeed;
+            abilityPower = gvc.abilityPower;
+            dodge = gvc.dodge;
+            crushingRes = gvc.crushingRes;
+            slashingRes = gvc.slashingRes;
+            piercingRes = gvc.piercingRes;
+            explosiveRes = gvc.explosiveRes;
+        }
         //Initial set max health
         characterCurrentHealth = maxHealth;
 
@@ -185,12 +209,12 @@ public class CharacterStats : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (characterCurrentHealth <= 0){
-            Destroy(gameObject);
+        if (characterCurrentHealth <= 0) {
+            Destroy (gameObject);
         }
     }
 
-        public GameObject popupDam;
+    public GameObject popupDam;
     void popupDamge (float dam) {
         GameObject popup = Instantiate (popupDam, transform.position, Quaternion.Euler (Vector3.zero));
         popup.transform.SetParent (GameObject.FindGameObjectWithTag ("CombatUI").transform, false);
