@@ -1601,7 +1601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: -66}
+  m_AnchoredPosition: {x: -97, y: -66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750874670
@@ -1646,7 +1646,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 750874671}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2053575837}
+        m_MethodName: decreaseLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &750874671
@@ -1982,7 +1993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101, y: -66}
+  m_AnchoredPosition: {x: 100, y: -66}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802016114
@@ -2027,7 +2038,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 802016115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2053575837}
+        m_MethodName: increaseLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &802016115
@@ -3487,6 +3509,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774388684}
   m_CullTransparentMesh: 0
+--- !u!1 &1785328607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785328609}
+  - component: {fileID: 1785328608}
+  m_Layer: 0
+  m_Name: GlobalVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1785328608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785328607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cdc0e48bd6364459e32cf8e4b6fa84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoutingLvl: 0
+  currentLvl: 0
+  currentExp: 0
+  expNeedToLvl: 0
+  totalExp: 0
+  vitality: 0
+  maxHealth: 0
+  defence: 0
+  meleeAttack: 0
+  rangeAttack: 0
+  attackSpeed: 0
+  moveSpeed: 0
+  abilityPower: 0
+  dodge: 0
+  crushingRes: 0
+  slashingRes: 0
+  piercingRes: 0
+  explosiveRes: 0
+--- !u!4 &1785328609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785328607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 295.3687, y: 197.32011, z: -55.40348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828258792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,23 +4110,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterPos: {fileID: 2014677586}
   healthbar: {fileID: 0}
-  currentLvl: 0
-  currentExp: 0
-  expNeedToLvl: 0
-  totalExp: 0
-  vitality: 0
+  currentLvl: 1
+  currentExp: 2
+  expNeedToLvl: 3
+  totalExp: 4
+  vitality: 5
   maxHealth: 1000
   defence: 50
   meleeAttack: 500
-  rangeAttack: 0
-  attackSpeed: 3
+  rangeAttack: 500
+  attackSpeed: 1
   moveSpeed: 1.5
   abilityPower: 0
   dodge: 0
   crushingRes: 10
   slashingRes: 5
   piercingRes: 20
-  explosiveRes: 0
+  explosiveRes: 2
   characterCurrentHealth: 0
   currentDamageOutput: 0
   popupDam: {fileID: 0}
@@ -4261,6 +4344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoutingLevel: 0
+  scoutingText: {fileID: 1168929797}
+  GVC: {fileID: 1785328608}
+  CS: {fileID: 2014677583}
 --- !u!1 &2110881399
 GameObject:
   m_ObjectHideFlags: 0
