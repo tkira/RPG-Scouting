@@ -4043,6 +4043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3399effd074f17440ba92324958f4835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gvc: {fileID: 0}
+  scoutingLvl: 0
 --- !u!4 &1263573116
 Transform:
   m_ObjectHideFlags: 0
@@ -4999,6 +5001,7 @@ MonoBehaviour:
   explosiveRes: 0
   characterCurrentHealth: 0
   currentDamageOutput: 0
+  gvc: {fileID: 0}
   popupDam: {fileID: 2795015996901281465, guid: c2d62998aeee548478c5de9d598cfe29,
     type: 3}
 --- !u!212 &1484819367
@@ -6692,11 +6695,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3853626357903582246, guid: 1b635990d633bb24597b69a14baee883,
-        type: 3}
-      propertyPath: m_Name
-      value: Rooms
-      objectReference: {fileID: 0}
     - target: {fileID: 3853626357903582233, guid: 1b635990d633bb24597b69a14baee883,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6751,6 +6749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853626357903582246, guid: 1b635990d633bb24597b69a14baee883,
+        type: 3}
+      propertyPath: m_Name
+      value: Rooms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b635990d633bb24597b69a14baee883, type: 3}
