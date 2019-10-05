@@ -24,6 +24,11 @@ TagManager:
   - PlayerHitbox
   - MonsterHitbox
   - PlayerCombat
+  - Box
+  - InteractCollider
+  - Button
+  - BrokenFloor
+  - Hole
   layers:
   - Default
   - TransparentFX
