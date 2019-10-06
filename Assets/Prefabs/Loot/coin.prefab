@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2926442066742629456}
   - component: {fileID: 9056157224122558531}
   - component: {fileID: 4860531201649578531}
+  - component: {fileID: 6463353870350396069}
   m_Layer: 0
   m_Name: coin
   m_TagString: Untagged
@@ -94,3 +95,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
+  currency: 0
+--- !u!58 &6463353870350396069
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5334113750051515537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09696984, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.642824

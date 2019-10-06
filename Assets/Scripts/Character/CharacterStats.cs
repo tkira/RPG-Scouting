@@ -8,7 +8,10 @@ public class CharacterStats : MonoBehaviour {
 
     public Transform characterPos;
     public HealthBar healthbar;
-
+    public Menu menu;
+    public MonstersStats monstersStats;
+    //Currency
+    public int coins;
     //Level Info
     public float currentLvl;
     public float currentExp;
@@ -46,6 +49,7 @@ public class CharacterStats : MonoBehaviour {
     {
         PlayerStats stats = SaveManager.Load();
         characterCurrentHealth = stats.characterCurrentHealth;
+        coins = stats.coins;
     }
 
     //Level Up Character
@@ -191,6 +195,7 @@ public class CharacterStats : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start () {
+        
         if (SceneManager.GetActiveScene ().name == "Dungeon") {
             //Get Tranfered character stats
             gvc = GameObject.Find ("GlobalVariables").GetComponent<GlobalVariablesController> ();
@@ -211,27 +216,35 @@ public class CharacterStats : MonoBehaviour {
             slashingRes = gvc.slashingRes;
             piercingRes = gvc.piercingRes;
             explosiveRes = gvc.explosiveRes;
+            coins = gvc.coins;
         }
         //Initial set max health
         characterCurrentHealth = maxHealth;
-
+        
         //Current Damage is Melee to be added later for diferent swap  damage;
         currentDamageOutput = meleeAttack;
     }
 
     // Update is called once per frame
     void Update () {
+       
+        Debug.Log(coins);
         if (characterCurrentHealth <= 0) {
             Destroy (gameObject);
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
             SavePlayer();
+            coins += 1;
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             LoadPlayer();
         }
+        
+        //if (coinScript.currency > 1) {
+        //        coins += (coinScript.currency - (coinScript.currency - 1));
+        //}
 
     }
 

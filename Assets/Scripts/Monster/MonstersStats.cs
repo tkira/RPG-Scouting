@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MonstersStats : MonoBehaviour {
 
     public Transform monsterPosition;
-
+	public int currency;
     //Main Stats
     public float maxHealth;
     public float defence;
@@ -160,6 +160,7 @@ public class MonstersStats : MonoBehaviour {
     void Start () {
         //Initial set max health
         monsterCurrentHealth = maxHealth;
+		currency = 10;
     }
   
     // Update is called once per frame
@@ -195,6 +196,7 @@ public class MonstersStats : MonoBehaviour {
             else
             {
                 randomNumber -= table[i];
+                
             }
         }
 

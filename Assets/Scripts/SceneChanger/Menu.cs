@@ -12,12 +12,13 @@ public class Menu : MonoBehaviour
     public GameObject Return;
     public GameObject Confirm;
     public GameObject BG;
+    public int currency;
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            currency = 10;
             if (pause)
             {
                 Time.timeScale = 1;

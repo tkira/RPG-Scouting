@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Combat\PlayerDetectMonster.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerTakeDamage.cs" />
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Currency\Currency.cs" />
     <Compile Include="Assets\Scripts\GlobalVariablesController.cs" />
     <Compile Include="Assets\Scripts\KeyControls\ExplosionSkill.cs" />
     <Compile Include="Assets\Scripts\KeyControls\SkillController.cs" />
