@@ -33,7 +33,7 @@ public class RoomSpawner : MonoBehaviour {
 
         float y = 0;
         float x = 0;
-        //float rand1 = Random.Range(0.1f,0.9f); //May prevent the spawning doors next to walls
+        float spawnrand1 = Random.Range(0.1f,0.3f); //Should help prevent the spawning doors next to walls due to simultaneous spawning
         switch (openingDirection) {
             case 1:
                 Top = true;
@@ -63,7 +63,7 @@ public class RoomSpawner : MonoBehaviour {
 
         templates = GameObject.FindGameObjectWithTag ("Rooms").GetComponent<RoomTemplates> ();
         monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
-        Invoke ("Spawn", 0.1f);
+        Invoke ("Spawn", spawnrand1);
     }
 
     // Update is called once per frame
