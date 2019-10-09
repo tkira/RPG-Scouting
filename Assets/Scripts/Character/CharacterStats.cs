@@ -36,6 +36,19 @@ public class CharacterStats : MonoBehaviour {
     public float characterCurrentHealth;
     public float currentDamageOutput;
 
+    //Currency
+    public int coins;
+    public void SavePlayer()
+    {
+        SaveManager.Save(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerStats stats = SaveManager.Load();
+        characterCurrentHealth = stats.characterCurrentHealth;
+        coins = stats.coins;
+    }
+
     //Level Up Character
     void levelUp () {
         currentLvl++;
@@ -199,6 +212,7 @@ public class CharacterStats : MonoBehaviour {
             slashingRes = gvc.slashingRes;
             piercingRes = gvc.piercingRes;
             explosiveRes = gvc.explosiveRes;
+            coins = gvc.coins;
         }
         //Initial set max health
         characterCurrentHealth = maxHealth;
@@ -212,6 +226,16 @@ public class CharacterStats : MonoBehaviour {
         if (characterCurrentHealth <= 0) {
             Destroy (gameObject);
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SavePlayer();
+            coins += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            LoadPlayer();
+        }
+
     }
 
     public GameObject popupDam;

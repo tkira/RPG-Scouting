@@ -26,7 +26,7 @@ public class GlobalVariablesController : MonoBehaviour {
     public float slashingRes;
     public float piercingRes;
     public float explosiveRes;
-
+    public int coins;
     // Start is called before the first frame update
     void Start () {
         DontDestroyOnLoad (this.gameObject);
