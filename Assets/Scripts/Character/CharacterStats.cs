@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour {
 
@@ -176,7 +176,7 @@ public class CharacterStats : MonoBehaviour {
     }
 
     public GlobalVariablesController gvc;
-
+    public ScoutingSystem cs;
     // Start is called before the first frame update
     void Start () {
         if (SceneManager.GetActiveScene ().name == "Dungeon") {
@@ -199,6 +199,8 @@ public class CharacterStats : MonoBehaviour {
             slashingRes = gvc.slashingRes;
             piercingRes = gvc.piercingRes;
             explosiveRes = gvc.explosiveRes;
+
+            cs.runScoutingRandomiser ();
         }
         //Initial set max health
         characterCurrentHealth = maxHealth;
