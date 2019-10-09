@@ -165,8 +165,7 @@ public class DoorCollider : MonoBehaviour {
             }
             if (Dungeondoor == true) {
                 //SceneManager.LoadScene("SampleScene");
-                scoutingPanel.SetActive (true);
-                
+                scoutingPanel.SetActive (true); 
             }
             if (Blacksmithdoor == true) {
                 SceneManager.LoadScene ("Blacksmith");

@@ -205,7 +205,7 @@ public class CharacterStats : MonoBehaviour {
     }
 
     public GlobalVariablesController gvc;
-
+    public ScoutingSystem cs;
     // Start is called before the first frame update
     void Start () {
         LoadPlayer ();
@@ -241,6 +241,8 @@ public class CharacterStats : MonoBehaviour {
             piercingRes = gvc.piercingRes;
             explosiveRes = gvc.explosiveRes;
             coins = gvc.coins;
+
+                        cs.runScoutingRandomiser ();
         }
 
     }
