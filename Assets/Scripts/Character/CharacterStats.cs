@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour {
 
@@ -38,30 +38,31 @@ public class CharacterStats : MonoBehaviour {
 
     //Currency
     public int coins;
-    public void SavePlayer()
-    {
-        SaveManager.Save(this);
+    public void SavePlayer () {
+        SaveManager.Save (this);
     }
-    public void LoadPlayer()
-    {
-        PlayerStats stats = SaveManager.Load();
-        characterCurrentHealth = stats.characterCurrentHealth;
-        coins = stats.coins;
-        totalExp = stats.totalExp;
-        expNeedToLvl = stats.expNeedToLvl;
-        currentExp = stats.currentExp;
-        currentLvl = stats.currentLvl;
+    public void LoadPlayer () {
+        PlayerStats stats = SaveManager.Load ();
 
-        maxHealth = stats.maxHealth;
-        defence = stats.defence;
-        meleeAttack = stats.meleeAttack;
-        abilityPower = stats.abilityPower;
-        attackSpeed = stats.attackSpeed;
-        moveSpeed = stats.moveSpeed;
+        if (stats.maxHealth != 0) {
+            characterCurrentHealth = stats.characterCurrentHealth;
+            coins = stats.coins;
+            totalExp = stats.totalExp;
+            expNeedToLvl = stats.expNeedToLvl;
+            currentExp = stats.currentExp;
+            currentLvl = stats.currentLvl;
 
-        crushingRes = stats.crushingRes;
-        explosiveRes = stats.explosiveRes;
-        piercingRes = stats.piercingRes;
+            maxHealth = stats.maxHealth;
+            defence = stats.defence;
+            meleeAttack = stats.meleeAttack;
+            abilityPower = stats.abilityPower;
+            attackSpeed = stats.attackSpeed;
+            moveSpeed = stats.moveSpeed;
+
+            crushingRes = stats.crushingRes;
+            explosiveRes = stats.explosiveRes;
+            piercingRes = stats.piercingRes;
+        }
     }
 
     //Level Up Character
@@ -207,15 +208,11 @@ public class CharacterStats : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start () {
-        LoadPlayer();
-        if (SceneManager.GetActiveScene().name == "Town")
-        {
-            if (Startmenu.loadGame == true)
-            {
-                LoadPlayer();
-            }
-            else
-            {
+        LoadPlayer ();
+        if (SceneManager.GetActiveScene ().name == "Town") {
+            if (Startmenu.loadGame == true) {
+                LoadPlayer ();
+            } else {
                 //Initial set max health
                 characterCurrentHealth = maxHealth;
                 //Current Damage is Melee to be added later for diferent swap  damage;
@@ -245,27 +242,21 @@ public class CharacterStats : MonoBehaviour {
             explosiveRes = gvc.explosiveRes;
             coins = gvc.coins;
         }
-        
-
-
-        
 
     }
 
     // Update is called once per frame
     void Update () {
-   
-        if (characterCurrentHealth <= 0) {
+
+        if (characterCurrentHealth <= 0 && SceneManager.GetActiveScene ().name != "Town") {
             Destroy (gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            SavePlayer();
+        if (Input.GetKeyDown (KeyCode.F)) {
+            SavePlayer ();
             coins += 1;
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            LoadPlayer();
+        if (Input.GetKeyDown (KeyCode.E)) {
+            LoadPlayer ();
         }
 
     }
