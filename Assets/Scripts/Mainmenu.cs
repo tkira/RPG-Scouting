@@ -11,6 +11,8 @@ public class Mainmenu : MonoBehaviour
     public GameObject Options;
     //public GameObject Confirm;
     public GameObject Exit;
+    public GameObject savegame;
+    public bool trigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class Mainmenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            trigger = true;
+            savegame.SetActive(true);
             Resume.SetActive(true);
             Controls.SetActive(true);
             Options.SetActive(true);
@@ -36,13 +40,24 @@ public class Mainmenu : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+        //if (Input.GetKeyDown(KeyCode.Escape) && trigger == true)
+        //{
+        //    trigger = false;
+        //    savegame.SetActive(false);
+        //    Resume.SetActive(false);
+        //    Controls.SetActive(false);
+        //    Options.SetActive(false);
+        //    Exit.SetActive(false);
+        //}
     }
+
     public void confirm()
     {
         Resume.SetActive(false);
         Controls.SetActive(false);
         Options.SetActive(false);
         Exit.SetActive(false);
+        savegame.SetActive(false);
         //Confirm.SetActive(true);
     }
     public void no()
@@ -51,6 +66,7 @@ public class Mainmenu : MonoBehaviour
         Controls.SetActive(false);
         Options.SetActive(false);
         Exit.SetActive(false);
+        savegame.SetActive(false);
         Time.timeScale = 1;
         //Confirm.SetActive(false);
         //BG.SetActive(false);

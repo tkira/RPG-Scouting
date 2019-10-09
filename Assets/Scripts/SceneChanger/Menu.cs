@@ -12,7 +12,12 @@ public class Menu : MonoBehaviour
     public GameObject Return;
     public GameObject Confirm;
     public GameObject BG;
+    public CharacterStats cs;
     // Update is called once per frame
+    void Start()
+    {
+        cs.LoadPlayer();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

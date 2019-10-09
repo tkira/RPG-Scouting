@@ -8,7 +8,7 @@ public class CharacterStats : MonoBehaviour {
 
     public Transform characterPos;
     public HealthBar healthbar;
-
+    Startmenu Smenu;
     //Level Info
     public float currentLvl;
     public float currentExp;
@@ -47,6 +47,21 @@ public class CharacterStats : MonoBehaviour {
         PlayerStats stats = SaveManager.Load();
         characterCurrentHealth = stats.characterCurrentHealth;
         coins = stats.coins;
+        totalExp = stats.totalExp;
+        expNeedToLvl = stats.expNeedToLvl;
+        currentExp = stats.currentExp;
+        currentLvl = stats.currentLvl;
+
+        maxHealth = stats.maxHealth;
+        defence = stats.defence;
+        meleeAttack = stats.meleeAttack;
+        abilityPower = stats.abilityPower;
+        attackSpeed = stats.attackSpeed;
+        moveSpeed = stats.moveSpeed;
+
+        crushingRes = stats.crushingRes;
+        explosiveRes = stats.explosiveRes;
+        piercingRes = stats.piercingRes;
     }
 
     //Level Up Character
@@ -192,6 +207,22 @@ public class CharacterStats : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start () {
+        LoadPlayer();
+        if (SceneManager.GetActiveScene().name == "Town")
+        {
+            if (Startmenu.loadGame == true)
+            {
+                LoadPlayer();
+            }
+            else
+            {
+                //Initial set max health
+                characterCurrentHealth = maxHealth;
+                //Current Damage is Melee to be added later for diferent swap  damage;
+                currentDamageOutput = meleeAttack;
+            }
+
+        }
         if (SceneManager.GetActiveScene ().name == "Dungeon") {
             //Get Tranfered character stats
             gvc = GameObject.Find ("GlobalVariables").GetComponent<GlobalVariablesController> ();
@@ -214,15 +245,16 @@ public class CharacterStats : MonoBehaviour {
             explosiveRes = gvc.explosiveRes;
             coins = gvc.coins;
         }
-        //Initial set max health
-        characterCurrentHealth = maxHealth;
+        
 
-        //Current Damage is Melee to be added later for diferent swap  damage;
-        currentDamageOutput = meleeAttack;
+
+        
+
     }
 
     // Update is called once per frame
     void Update () {
+   
         if (characterCurrentHealth <= 0) {
             Destroy (gameObject);
         }

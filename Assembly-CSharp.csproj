@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\NPC\NPCWander.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Startmenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger\Menu.cs" />
     <Compile Include="Assets\Scripts\Scouting\ScoutingController.cs" />
     <Compile Include="Assets\Scripts\Scouting\ScoutingSystem.cs" />
