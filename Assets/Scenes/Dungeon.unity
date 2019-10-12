@@ -4220,11 +4220,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gvc: {fileID: 0}
-  scoutingLvl: 0
+  scoutingLvl: 5
   charstats: {fileID: 1484819366}
   buffs: {fileID: 693330658}
   debuffs: {fileID: 693330657}
   scoutingPanel: {fileID: 693330655}
+  noBuffs: 5
   scoutingEffectsDebuffs: []
   scoutingEffectsBuffs: []
 --- !u!4 &1263573116
