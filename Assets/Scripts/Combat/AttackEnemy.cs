@@ -53,5 +53,10 @@ public class AttackEnemy : MonoBehaviour {
         if (col.gameObject == playerDetect.closestEnemy) {
             rcChar.stop ();
         }
+
+        if (col.gameObject.tag == "Wall") {
+            rcChar.stop ();
+        }
     }
+
 }

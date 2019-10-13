@@ -253,11 +253,11 @@ public class CharacterStats : MonoBehaviour {
         if (characterCurrentHealth <= 0 && SceneManager.GetActiveScene ().name != "Town") {
             Destroy (gameObject);
         }
-        if (Input.GetKeyDown (KeyCode.F)) {
+        if (Input.GetKeyDown (KeyCode.F1)) {
             SavePlayer ();
             coins += 1;
         }
-        if (Input.GetKeyDown (KeyCode.E)) {
+        if (Input.GetKeyDown (KeyCode.F2)) {
             LoadPlayer ();
         }
 

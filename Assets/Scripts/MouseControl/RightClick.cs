@@ -63,16 +63,49 @@ public class RightClick : MonoBehaviour {
         targetPosition = pos;
     }
 
+    int keyPress;
+
     // Update is called once per frame
     void Update () {
+
+        //Move with WASD or Arrows
+        if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5) {
+            keyPress = 1;
+            transform.Translate (new Vector3 (Input.GetAxisRaw ("Horizontal") * characterStats.moveSpeed * Time.deltaTime, 0f, 0f));
+            //Moving Right
+            animator.SetInteger ("MovingType", 1);
+            moving = true;
+            if (Input.GetKeyDown (KeyCode.A) || (Input.GetKeyDown (KeyCode.LeftArrow))) {
+                transform.localScale = new Vector3 (setScale.x, setScale.y, setScale.z);
+            } else if (Input.GetKeyDown (KeyCode.D) || (Input.GetKeyDown (KeyCode.RightArrow))) {
+                transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
+            }
+            targetPosition = transform.position;
+            transform.position = targetPosition;
+        }
+
+        if (Input.GetAxisRaw ("Vertical") > 0.5f || Input.GetAxisRaw ("Vertical") < -0.5) {
+            keyPress = 1;
+            transform.Translate (new Vector3 (0f, Input.GetAxisRaw ("Vertical") * characterStats.moveSpeed * Time.deltaTime, 0f));
+            targetPosition = transform.position;
+            transform.position = targetPosition;
+            animator.SetInteger ("MovingType", 1);
+        }
+
+        if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.UpArrow)) {
+            keyPress = 1;
+        } else {
+            keyPress = 0;
+        }
+
         //Select idle animation
-        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y && !attacking) {
+        if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y && !attacking && keyPress == 0) {
             animator.SetInteger ("MovingType", 0);
             moving = false;
         }
 
         //CLick left mouse, also disable if moving rooms
-        if (Input.GetKeyDown (KeyCode.Mouse1) && !dCol.keyEntered && !attacking) {
+        if (Input.GetKeyDown (KeyCode.Mouse1) && !dCol.keyEntered) {
             //Get position
             targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
@@ -117,4 +150,5 @@ public class RightClick : MonoBehaviour {
     public void flipPlayerRight () {
         transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
     }
+
 }
