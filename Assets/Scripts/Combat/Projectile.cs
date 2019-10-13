@@ -7,9 +7,27 @@ public class Projectile : MonoBehaviour {
     public float speed;
     private Transform player;
     private Vector2 target;
+    public GameObject[] playersss;
+    public List<GameObject> players;
+    public GameObject playr;
 
     void Start () {
-        player = GameObject.FindGameObjectWithTag ("Player").transform;
+        players = new List<GameObject> ();
+        playersss = GameObject.FindGameObjectsWithTag ("Player");
+
+        foreach (GameObject pl in playersss) {
+            players.Add (pl);
+        }
+
+        if (players.Count == 1) {
+            playr = players[0];
+        } else if (players.Count > 1) {
+            //If the is multiple in range sort and find the closest
+                    playr = players[1];
+        }
+
+        player = playr.transform;
+
         target = new Vector2 (player.position.x, player.position.y);
 
         // Calculate the distance between the destination and the farmer.

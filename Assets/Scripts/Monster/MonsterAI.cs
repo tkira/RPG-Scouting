@@ -7,7 +7,8 @@
 
      public Transform Player;
      public float moveSpeed;
-     public float MinDist;     public float MaxDist;
+     public float MinDist;
+     public float MaxDist;
      public bool inRangeOfPlayer;
      public MonstersStats monStats;
      public bool rangedMonster;
@@ -19,11 +20,39 @@
      void Start () {
          attackDelay = false;
          setScale = transform.localScale;
-         Player = GameObject.FindGameObjectWithTag ("Player").transform;
-         aniMon = gameObject.GetComponent<Animator>();
+         aniMon = gameObject.GetComponent<Animator> ();
      }
 
+     public GameObject[] playersss;
+     public List<GameObject> players;
+         GameObject playr;
      void Update () {
+         players = new List<GameObject> ();
+         playersss = GameObject.FindGameObjectsWithTag ("Player");
+
+         foreach (GameObject pl in playersss) {
+             players.Add (pl);
+         }
+
+         if (players.Count == 1) {
+             playr = players[0];
+         } else if (players.Count > 1) {
+             //If the is multiple in range sort and find the closest
+             for (int i = 1; i < players.Count; i++) {
+                 //Set first enemy
+                 if (playr == null) {
+                     playr = players[0];
+                 }
+                 float cloDistance = (Player.transform.position - transform.position).sqrMagnitude;
+                 float curDistance = (players[i].transform.position - transform.position).sqrMagnitude;
+                 //compare current enemy with another and set if closer.
+                 if (curDistance < cloDistance) {
+                     playr = players[i];
+                 }
+             }
+         }
+
+         Player = playr.transform;
 
          //Face Right
          if (Player.position.x > transform.position.x) {
@@ -33,7 +62,6 @@
          } else if (Player.position.x < transform.position.x) {
              //Flip Character
              transform.localScale = new Vector3 (-setScale.x, setScale.y, setScale.z);
-
          }
 
          if (Vector3.Distance (transform.position, Player.position) >= MinDist && !inRangeOfPlayer && Vector3.Distance (transform.position, Player.position) <= MaxDist) {

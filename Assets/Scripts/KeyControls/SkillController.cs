@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class SkillController : MonoBehaviour {
     //Change Script name to change skill
-    public ExplosionSkill skill1;
+    public CloneSkill skill1;
     public GameObject skill1Panel;
     bool skill1CooldownB;
     public Text skill1CooldownText;
     public int skill1CurrentCooldown;
 
-    public GameObject skill2;
+    public DashSkill skill2;
+    public GameObject skill2Panel;
+    bool skill2CooldownB;
+    public Text skill2CooldownText;
+    public int skill2CurrentCooldown;
 
     // Start is called before the first frame update
     void Start () {
@@ -26,14 +30,24 @@ public class SkillController : MonoBehaviour {
                 skill1CooldownB = true;
                 StartCoroutine (skill1StartCountdown ());
             }
-        } else if (Input.GetKeyDown (KeyCode.W)) {
-            Debug.Log ("w key was pressed");
+        } else if (Input.GetKeyDown (KeyCode.E)) {
+            if (!skill2.skillRunning && !skill2CooldownB) {
+                skill2.runSkill ();
+                skill2CooldownB = true;
+                StartCoroutine (skill2StartCountdown ());
+            }
         }
 
         if (skill1CooldownB) {
             skill1Panel.SetActive (true);
         } else {
             skill1Panel.SetActive (false);
+        }
+
+        if (skill2CooldownB) {
+            skill2Panel.SetActive (true);
+        } else {
+            skill2Panel.SetActive (false);
         }
     }
 
@@ -46,6 +60,19 @@ public class SkillController : MonoBehaviour {
             skill1CooldownText.text = skill1CurrentCooldown.ToString ();
             if (skill1CurrentCooldown == 0) {
                 skill1CooldownB = false;
+            }
+        }
+    }
+
+    public IEnumerator skill2StartCountdown () {
+        skill2CurrentCooldown = skill2.cooldown;
+        skill2CooldownText.text = skill2CurrentCooldown.ToString ();
+        while (skill2CurrentCooldown > 0) {
+            yield return new WaitForSeconds (1.0f);
+            skill2CurrentCooldown--;
+            skill2CooldownText.text = skill2CurrentCooldown.ToString ();
+            if (skill2CurrentCooldown == 0) {
+                skill2CooldownB = false;
             }
         }
     }
