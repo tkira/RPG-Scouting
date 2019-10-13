@@ -17,17 +17,17 @@ public class DashSkill : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
     }
 
     public void runSkill () {
-        if (!skillRunning) {
+        if (!skillRunning || rc.moving) {
             StartCoroutine (SkillAnimation ());
         }
     }
 
     IEnumerator SkillAnimation () {
-        playe2d.AddForce (targetPosition * dashPower, ForceMode2D.Impulse);
+        playe2d.AddForce (rc.targetPosition * dashPower, ForceMode2D.Impulse);
         skillRunning = true;
         yield return new WaitForSeconds (0.2f);
         skillRunning = false;

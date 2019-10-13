@@ -4826,7 +4826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gvc: {fileID: 0}
   scoutingLvl: 5
-  charstats: {fileID: 0}
+  charstats: {fileID: 1484819366}
   buffs: {fileID: 693330658}
   debuffs: {fileID: 693330657}
   scoutingPanel: {fileID: 693330655}
@@ -7109,6 +7109,7 @@ MonoBehaviour:
   skill2Panel: {fileID: 1685329533}
   skill2CooldownText: {fileID: 1025365996}
   skill2CurrentCooldown: 0
+  rc: {fileID: 1484819364}
 --- !u!1 &1849138804
 GameObject:
   m_ObjectHideFlags: 0

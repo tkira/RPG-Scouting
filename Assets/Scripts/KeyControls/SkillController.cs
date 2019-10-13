@@ -16,7 +16,7 @@ public class SkillController : MonoBehaviour {
     bool skill2CooldownB;
     public Text skill2CooldownText;
     public int skill2CurrentCooldown;
-
+    public RightClick rc;
     // Start is called before the first frame update
     void Start () {
 
@@ -31,7 +31,7 @@ public class SkillController : MonoBehaviour {
                 StartCoroutine (skill1StartCountdown ());
             }
         } else if (Input.GetKeyDown (KeyCode.E)) {
-            if (!skill2.skillRunning && !skill2CooldownB) {
+            if (!skill2.skillRunning && !skill2CooldownB && rc.moving) {
                 skill2.runSkill ();
                 skill2CooldownB = true;
                 StartCoroutine (skill2StartCountdown ());

@@ -16,7 +16,7 @@ public class ScoutingSystem : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start () {
-        runScoutingRandomiser ();
+        //runScoutingRandomiser ();
         gvc = GameObject.Find ("GlobalVariables").GetComponent<GlobalVariablesController> ();
         scoutingLvl = gvc.scoutingLvl;
     }
