@@ -13,19 +13,20 @@
      public MonstersStats monStats;
      public bool rangedMonster;
      public bool meleeMonster;
+     public bool withTransitionAni;
+     public bool transistion;
      Vector3 setScale;
-
-     public Animator aniMon;
+     public Animator monsAni;
 
      void Start () {
          attackDelay = false;
          setScale = transform.localScale;
-         aniMon = gameObject.GetComponent<Animator> ();
+         monsAni = gameObject.GetComponent<Animator> ();
      }
 
      public GameObject[] playersss;
      public List<GameObject> players;
-         GameObject playr;
+     GameObject playr;
      void Update () {
          players = new List<GameObject> ();
          playersss = GameObject.FindGameObjectsWithTag ("Player");
@@ -67,20 +68,27 @@
          if (Vector3.Distance (transform.position, Player.position) >= MinDist && !inRangeOfPlayer && Vector3.Distance (transform.position, Player.position) <= MaxDist) {
              transform.position = Vector2.MoveTowards (transform.position, Player.position, moveSpeed * Time.deltaTime);
              inRangeOfPlayer = false;
-         }
-
-         if (Vector3.Distance (transform.position, Player.position) >= MinDist) {
-             inRangeOfPlayer = false;
-         }
-
-         if (Vector3.Distance (transform.position, Player.position) <= MinDist) {
+             monsAni.SetInteger ("MovingType", 1);
+         } else if (Vector3.Distance (transform.position, Player.position) <= MinDist) {
              inRangeOfPlayer = true;
-
              if (rangedMonster) {
+                 if (withTransitionAni && !transistion && inRangeOfPlayer) {
+                     monsAni.SetInteger ("MovingType", 3);
+                     StartCoroutine (transitionDD ());
+                     transistion = true;
+                 }
                  attack ();
              } else if (meleeMonster) {
                  attackM ();
              }
+         } else {
+             inRangeOfPlayer = false;
+             monsAni.SetInteger ("MovingType", 0);
+         }
+
+         if (withTransitionAni && transistion && !inRangeOfPlayer) {
+             monsAni.SetInteger ("MovingType", 4);
+             transistion = false;
          }
      }
 
@@ -89,20 +97,27 @@
      void attackM () {
          if (!attackDelay) {
              attackDelay = true;
-             meleeAttackHitbox.SetActive (true);
+             monsAni.SetInteger ("MovingType", 2);
+             //meleeAttackHitbox.SetActive (true);
              StartCoroutine (meleeDelays ());
          }
      }
 
+     IEnumerator transitionDD () {
+         yield return new WaitForSeconds (1f);
+     }
+
      IEnumerator meleeDelays () {
          yield return new WaitForSeconds (0.5f);
-         meleeAttackHitbox.SetActive (false);
+         //meleeAttackHitbox.SetActive (false);
+         monsAni.SetInteger ("MovingType", 0);
          StartCoroutine (attackDelayTimer ());
      }
 
      bool attackDelay;
      public GameObject bullet;
      public Transform bulletSpawn;
+     
      void attack () {
          if (!attackDelay) {
              attackDelay = true;

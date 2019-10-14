@@ -17,7 +17,7 @@ public class DashSkill : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        targetPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
     }
 
     public void runSkill () {
@@ -27,11 +27,12 @@ public class DashSkill : MonoBehaviour {
     }
 
     IEnumerator SkillAnimation () {
-        playe2d.AddForce (rc.targetPosition * dashPower, ForceMode2D.Impulse);
+        playe2d.velocity = Vector3.zero;
+        playe2d.AddForce (targetPosition * dashPower, ForceMode2D.Impulse);
         skillRunning = true;
         yield return new WaitForSeconds (0.2f);
         skillRunning = false;
         playe2d.velocity = Vector3.zero;
-        rc.stop();
+        rc.stop ();
     }
 }

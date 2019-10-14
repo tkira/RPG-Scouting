@@ -154,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700974646160750739}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.002, y: 0.56, z: 0}
-  m_LocalScale: {x: -0.38805166, y: 0.09018001, z: 1.0301455}
+  m_LocalPosition: {x: 0.002, y: 0.46, z: 0}
+  m_LocalScale: {x: -0.31044134, y: 0.07214401, z: 0.8241164}
   m_Children: []
   m_Father: {fileID: 8567877389379460504}
   m_RootOrder: 3
@@ -249,8 +249,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8567877388671702924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0, z: 0}
-  m_LocalScale: {x: 0.29798, y: 0.29798, z: 0.29798}
+  m_LocalPosition: {x: -0.041, y: -0.009, z: 0}
+  m_LocalScale: {x: 0.23838401, y: 0.29798, z: 0.29798}
   m_Children: []
   m_Father: {fileID: 8567877389379460504}
   m_RootOrder: 0
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 8567877389379460505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.94, y: 0.26, z: 0}
-  m_LocalScale: {x: 0.668049, y: 0.6680489, z: 0.6680489}
+  m_LocalScale: {x: 0.7922644, y: 0.7922644, z: 0.7922644}
   m_Children:
   - {fileID: 8567877388671702931}
   - {fileID: 2812512308538023855}
@@ -352,13 +352,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   moveSpeed: 1
-  MinDist: 0.7
+  MinDist: 0.5
   MaxDist: 9
   inRangeOfPlayer: 0
   monStats: {fileID: 8567877389379460509}
   rangedMonster: 0
   meleeMonster: 1
-  aniMon: {fileID: 0}
+  monsAni: {fileID: 2107505120}
+  playersss: []
+  players: []
   meleeAttackHitbox: {fileID: 8567877388671702924}
   bullet: {fileID: 0}
   bulletSpawn: {fileID: 0}
@@ -400,13 +402,12 @@ SpriteRenderer:
   m_SortingLayerID: -1304438493
   m_SortingLayer: 11
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4035959289877228764, guid: af30fe2bfc5cdc645be26dbbe6a39220,
-    type: 3}
-  m_Color: {r: 0, g: 0.990566, b: 0.12342753, a: 1}
+  m_Sprite: {fileID: 523844683030640136, guid: d0a909d4e606dbe4c8a861e755213fd3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.515625, y: 0.453125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
