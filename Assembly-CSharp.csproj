@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\UI\GetInfoEnemy.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\PopupDamageEnemy.cs" />
+    <Compile Include="Assets\Scripts\UI\Weapons.cs" />
     <Compile Include="Assets\Scripts\UNUSED\TargetEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
