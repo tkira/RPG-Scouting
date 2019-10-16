@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     private bool pause = false;
-    public GameObject Resume;
+    public GameObject Resume, backpack, backpack1, backpack2;
     public GameObject Controls;
     public GameObject Options;
     public GameObject Return;
@@ -41,6 +41,7 @@ public class Menu : MonoBehaviour
             Confirm.SetActive(false);
             Debug.Log("zzzzzzzzzzzzzzzzzzzzzzz");
         }
+
     }
 
 
@@ -87,7 +88,27 @@ public class Menu : MonoBehaviour
         Return.SetActive(false);
         Confirm.SetActive(false);
         BG.SetActive(false);
+     
+
         Time.timeScale = 1;
     }
+
+    public void backPackopen()
+    {
+        backpack.SetActive(true);
+        Time.timeScale = 0;
+        backpack1.SetActive(false);
+        backpack2.SetActive(true);
+    }
+    public void backPackclose()
+    {
+        backpack.SetActive(false);
+        Time.timeScale = 1;
+        backpack1.SetActive(true);
+        backpack2.SetActive(false);
+    }
+
+
+
 
 }

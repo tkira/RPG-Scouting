@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  playersss: []
+  players: []
+  playr: {fileID: 0}
 --- !u!114 &1927202751982984070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +68,7 @@ MonoBehaviour:
   crushDamageType: 0
   explosiveDamageType: 0
   monsterStats: {fileID: 0}
-  characterStats: {fileID: 0}
+  pTd: {fileID: 0}
 --- !u!212 &8015339464796795852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -103,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 712410681
   m_SortingLayer: 13
-  m_SortingOrder: 0
+  m_SortingOrder: 9998
   m_Sprite: {fileID: 1865952339040183261, guid: 31016deb1eacda84bb9919f7f718a8ec,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
