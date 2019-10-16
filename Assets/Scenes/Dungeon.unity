@@ -683,8 +683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 353, y: 68.7}
-  m_SizeDelta: {x: 275.6, y: 52.8}
+  m_AnchoredPosition: {x: 354.6, y: 68.7}
+  m_SizeDelta: {x: 280.9, y: 52.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134797230
 MonoBehaviour:
@@ -1010,8 +1010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162420466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -451.64, y: -253.62, z: 0}
-  m_LocalScale: {x: 1.71188, y: 1.6975499, z: 1}
+  m_LocalPosition: {x: -462.82, y: -259.68, z: 0}
+  m_LocalScale: {x: 1.7170156, y: 1.6975499, z: 1}
   m_Children:
   - {fileID: 292737263}
   - {fileID: 134797229}
@@ -1598,8 +1598,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171.4, y: 68.7}
-  m_SizeDelta: {x: 275.6, y: 52.8}
+  m_AnchoredPosition: {x: 167.8, y: 68.7}
+  m_SizeDelta: {x: 280.9, y: 52.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292737264
 MonoBehaviour:
@@ -3900,8 +3900,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 1356483070}
   DoorIcon: {fileID: 1356483070}
+  shopicon: {fileID: 0}
   camera: {fileID: 519420028}
   Ttrigger: 0
+  shop: 0
   Btrigger: 0
   Rtrigger: 0
   Ltrigger: 0
