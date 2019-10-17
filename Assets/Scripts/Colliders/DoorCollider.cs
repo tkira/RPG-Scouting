@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class DoorCollider : MonoBehaviour {
 
     public GameObject interactIcon;
-    public GameObject DoorIcon;
+    public GameObject DoorIcon, shopicon;
     public GameObject camera;
-    public bool Ttrigger = false;
+    public bool Ttrigger = false , shop = false;
     public bool Btrigger = false;
     public bool Rtrigger = false;
     public bool Ltrigger = false;
@@ -44,6 +44,11 @@ public class DoorCollider : MonoBehaviour {
             }
             if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = true;
+            }
+            if (col.gameObject.tag == "weapons")
+            {
+                shopicon.SetActive(true);
+                shop = true;
             }
 
         }
@@ -142,6 +147,11 @@ public class DoorCollider : MonoBehaviour {
             }
             DoorIcon.SetActive (false);
         }
+        if (col.gameObject.tag == "weapons")
+        {
+            shopicon.SetActive(false);
+            shop = false;
+        }
     }
 
     Vector3 startPos;
@@ -154,6 +164,10 @@ public class DoorCollider : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.Space) && !keyEntered) {
             keyEntered = true;
             startPos = camera.transform.position;
+        }
+        if (Input.GetKeyDown (KeyCode.Space) && shop == true)
+        {
+
         }
         //----Town scene change
         if (keyEntered == true) {

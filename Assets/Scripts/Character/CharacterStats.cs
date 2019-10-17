@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour {
 
+    public GameObject gameover;
+    //---
     public Transform characterPos;
     public HealthBar healthbar;
     Startmenu Smenu;
@@ -251,6 +253,8 @@ public class CharacterStats : MonoBehaviour {
     void Update () {
 
         if (characterCurrentHealth <= 0 && SceneManager.GetActiveScene ().name != "Town") {
+            gameover.SetActive(true);
+            Time.timeScale = 0;
             Destroy (gameObject);
         }
         if (Input.GetKeyDown (KeyCode.F1)) {
@@ -260,6 +264,7 @@ public class CharacterStats : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.F2)) {
             LoadPlayer ();
         }
+        
 
     }
 

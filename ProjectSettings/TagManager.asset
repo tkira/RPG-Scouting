@@ -30,6 +30,7 @@ TagManager:
   - BrokenFloor
   - Hole
   - Wall
+  - weapons
   layers:
   - Default
   - TransparentFX

@@ -1,20 +1,22 @@
 ﻿<Properties StartupConfiguration="{B27C6DDD-844D-7065-0214-68879764FE5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SaveLoad/Startmenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Colliders/DoorCollider.cs">
     <Files>
       <File FileName="Assets/Scripts/Currency/Currency.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/GlobalVariablesController.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Monster/MonsterAI.cs" Line="54" Column="29" />
+      <File FileName="Assets/Scripts/GlobalVariablesController.cs" />
+      <File FileName="Assets/Scripts/Monster/MonsterAI.cs" Line="54" Column="11" />
       <File FileName="Assets/Scripts/SaveLoad/PlayerStats.cs" Line="40" Column="48" />
-      <File FileName="Assets/Scripts/Scouting/ScoutingController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SaveLoad/Startmenu.cs" Line="7" Column="17" />
-      <File FileName="Assets/Scripts/Character/CharacterStats.cs" Line="210" Column="57" NotebookId="1" />
-      <File FileName="Assets/Scripts/Mainmenu.cs" Line="47" Column="39" NotebookId="1" />
-      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" Line="19" Column="25" NotebookId="1" />
+      <File FileName="Assets/Scripts/Scouting/ScoutingController.cs" />
+      <File FileName="Assets/Scripts/SaveLoad/Startmenu.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/Character/CharacterStats.cs" Line="234" Column="35" />
+      <File FileName="Assets/Scripts/Mainmenu.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" Line="100" Column="36" NotebookId="1" />
+      <File FileName="Assets/Scripts/UI/Weapons.cs" Line="8" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="91a80749-eaf9-40f5-81a5-1f67f8c0187a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5fd056fd-6626-4ac3-8527-42046c1aea54" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
