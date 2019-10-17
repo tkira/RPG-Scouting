@@ -1010,8 +1010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162420466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -462.82, y: -259.68, z: 0}
-  m_LocalScale: {x: 1.7170156, y: 1.6975499, z: 1}
+  m_LocalPosition: {x: -364, y: -200, z: 0}
+  m_LocalScale: {x: 1.3669332, y: 1.3514365, z: 0.79611}
   m_Children:
   - {fileID: 292737263}
   - {fileID: 134797229}
@@ -8868,11 +8868,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3266422717494998368, guid: 66bb5451387b4634aa89cf65cef5f3bd,
-        type: 3}
-      propertyPath: m_Name
-      value: WallColliders
-      objectReference: {fileID: 0}
     - target: {fileID: 3266422717494998369, guid: 66bb5451387b4634aa89cf65cef5f3bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8927,6 +8922,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266422717494998368, guid: 66bb5451387b4634aa89cf65cef5f3bd,
+        type: 3}
+      propertyPath: m_Name
+      value: WallColliders
       objectReference: {fileID: 0}
     - target: {fileID: 3266422716407879899, guid: 66bb5451387b4634aa89cf65cef5f3bd,
         type: 3}

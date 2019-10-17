@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2302418950637869665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7599532389440528961}
+  m_Layer: 9
+  m_Name: ProjectileSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7599532389440528961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302418950637869665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.47, y: 0.13, z: 4.107422}
+  m_LocalScale: {x: 0.36299628, y: 0.36299628, z: 0.36299628}
+  m_Children: []
+  m_Father: {fileID: 7557369393881158320}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4111242682662639973
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,36 +253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monStats: {fileID: 7557369393881158325}
   Xscale: 0.3880517
---- !u!1 &6341682917553966918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1617946333593575966}
-  m_Layer: 9
-  m_Name: ProjectileSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1617946333593575966
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6341682917553966918}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7557369393881158320}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7557369393521531044
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ Transform:
   - {fileID: 7557369393521531067}
   - {fileID: 4111242683298154713}
   - {fileID: 4111242682662639972}
-  - {fileID: 1617946333593575966}
+  - {fileID: 7599532389440528961}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -396,7 +396,7 @@ MonoBehaviour:
   players: []
   meleeAttackHitbox: {fileID: 7557369393521531044}
   bullet: {fileID: 8015339464796795849, guid: 18158b0fffe12234185053fcb58ca6b6, type: 3}
-  bulletSpawn: {fileID: 1617946333593575966}
+  bulletSpawn: {fileID: 7599532389440528961}
 --- !u!212 &7557369393881158326
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
   maxHealth: 1000
   defence: 10
   meleeAttack: 100
-  rangeAttack: 0
+  rangeAttack: 100
   attackSpeed: 2
   moveSpeed: 0
   crushingRes: 0
