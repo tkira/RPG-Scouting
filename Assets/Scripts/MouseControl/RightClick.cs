@@ -6,7 +6,7 @@ public class RightClick : MonoBehaviour {
 
     //DoorCollider Script
     public DoorCollider dCol;
-
+    public Rigidbody2D playe2d;
     //Check what direction character is facing
     public bool facingLeft;
     public Animator animator;
@@ -33,20 +33,24 @@ public class RightClick : MonoBehaviour {
     public void teleportToNewPositionT () {
         transform.position = new Vector3 (transform.position.x, transform.position.y + 6, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionB () {
         transform.position = new Vector3 (transform.position.x, transform.position.y - 6, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionR () {
         transform.position = new Vector3 (transform.position.x + 4, transform.position.y, transform.position.z);
         StartCoroutine (Wait (transform.position));
+        playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionL () {
         transform.position = new Vector3 (transform.position.x - 4, transform.position.y, transform.position.z);
+                playe2d.velocity = Vector3.zero;
         StartCoroutine (Wait (transform.position));
         stop ();
     }

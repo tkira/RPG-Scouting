@@ -3375,11 +3375,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillRunning: 0
-  cooldown: 2
+  skillTime: 5
+  cooldown: 10
   playerPos: {fileID: 1484819363}
   playe2d: {fileID: 1484819369}
   dashPower: 3
   rc: {fileID: 1484819364}
+  charstats: {fileID: 1484819366}
 --- !u!4 &705664394
 Transform:
   m_ObjectHideFlags: 0
@@ -6718,6 +6720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dCol: {fileID: 859484356}
+  playe2d: {fileID: 1484819369}
   facingLeft: 0
   animator: {fileID: 1484819368}
   targetPosition: {x: 0, y: 0}
@@ -6865,7 +6868,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
