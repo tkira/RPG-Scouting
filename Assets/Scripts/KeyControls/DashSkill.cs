@@ -12,8 +12,9 @@ public class DashSkill : MonoBehaviour {
     public float dashPower;
     public RightClick rc;
     Ray ray;
-    Vector2 targetPosition; 
+    Vector2 targetPosition;
     public CharacterStats charstats;
+    public Animator m_Animator;
     // Start is called before the first frame update
     void Start () { }
 
@@ -23,7 +24,7 @@ public class DashSkill : MonoBehaviour {
     }
 
     public void runSkill () {
-        if (!skillRunning || rc.moving) {
+        if (!skillRunning) {
             StartCoroutine (SkillAnimation ());
         }
     }
@@ -31,12 +32,17 @@ public class DashSkill : MonoBehaviour {
     IEnumerator SkillAnimation () {
         playe2d.velocity = Vector3.zero;
         float normalSpeed = charstats.moveSpeed;
+        float attackkSpeedss = charstats.attackSpeed;
+        charstats.attackSpeed = 0.5f;
         charstats.moveSpeed = charstats.moveSpeed * 3;
+        m_Animator.speed = 3;
         //playe2d.AddForce (targetPosition * dashPower, ForceMode2D.Impulse);
         skillRunning = true;
         yield return new WaitForSeconds (skillTime);
         skillRunning = false;
         charstats.moveSpeed = normalSpeed;
+        charstats.attackSpeed = attackkSpeedss;
+        m_Animator.speed = 1;
         //playe2d.velocity = Vector3.zero;
         //rc.stop ();
     }

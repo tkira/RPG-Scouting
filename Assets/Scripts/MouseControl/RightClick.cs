@@ -27,6 +27,7 @@ public class RightClick : MonoBehaviour {
     public bool attacking;
 
     void Start () {
+        walktime = true;
         setScale = transform.localScale;
     }
 
@@ -50,7 +51,7 @@ public class RightClick : MonoBehaviour {
     }
     public void teleportToNewPositionL () {
         transform.position = new Vector3 (transform.position.x - 4, transform.position.y, transform.position.z);
-                playe2d.velocity = Vector3.zero;
+        playe2d.velocity = Vector3.zero;
         StartCoroutine (Wait (transform.position));
         stop ();
     }
@@ -144,7 +145,20 @@ public class RightClick : MonoBehaviour {
         //Move player towards position
         transform.position = Vector2.MoveTowards (transform.position, targetPosition, Time.deltaTime * characterStats.moveSpeed);
 
+        if (moving && walktime) {
+            asssc.pwalk ();
+            StartCoroutine (walkwait ());
+        }
         Debug.DrawLine (this.transform.position, targetPosition);
+    }
+
+    public float walkinter;
+    public PlayerWalk asssc;
+    bool walktime;
+    IEnumerator walkwait () {
+        walktime = false;
+        yield return new WaitForSeconds (walkinter);
+        walktime = true;
     }
 
     public void flipPlayerLeft () {

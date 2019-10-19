@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\2019.2.0f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -107,6 +105,9 @@
      <Compile Include="Assets\Scripts\SceneChanger\Menu.cs" />
      <Compile Include="Assets\Scripts\Scouting\ScoutingController.cs" />
      <Compile Include="Assets\Scripts\Scouting\ScoutingSystem.cs" />
+     <Compile Include="Assets\Scripts\Sounds\AudioController.cs" />
+     <Compile Include="Assets\Scripts\Sounds\MonsterContoller.cs" />
+     <Compile Include="Assets\Scripts\Sounds\PlayerWalk.cs" />
      <Compile Include="Assets\Scripts\UI\GetInfoEnemy.cs" />
      <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
      <Compile Include="Assets\Scripts\UI\PopupDamageEnemy.cs" />

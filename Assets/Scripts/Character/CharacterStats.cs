@@ -117,14 +117,16 @@ public class CharacterStats : MonoBehaviour {
             //This is to prevent dealing minus damage because of defence higher than damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         } else if (crushingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         }
     }
@@ -141,14 +143,16 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         } else if (slashingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         }
     }
@@ -165,14 +169,16 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         } else if (piercingRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         }
     }
@@ -189,14 +195,16 @@ public class CharacterStats : MonoBehaviour {
             //Defence Higher then damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         } else if (explosiveRes == 0) {
             adjustedDamage = damage - defence;
             //Defence is lower then damage, deal damage
             if (adjustedDamage > 0) {
                 characterCurrentHealth = characterCurrentHealth - adjustedDamage;
-                popupDamge (adjustedDamage);
+                characterCurrentHealth = Mathf.Round (characterCurrentHealth);
+                popupDamge (Mathf.Round (adjustedDamage));
             }
         }
     }
@@ -244,7 +252,7 @@ public class CharacterStats : MonoBehaviour {
             explosiveRes = gvc.explosiveRes;
             coins = gvc.coins;
 
-                        cs.runScoutingRandomiser ();
+            cs.runScoutingRandomiser ();
         }
 
     }
@@ -253,7 +261,7 @@ public class CharacterStats : MonoBehaviour {
     void Update () {
 
         if (characterCurrentHealth <= 0 && SceneManager.GetActiveScene ().name != "Town") {
-            gameover.SetActive(true);
+            gameover.SetActive (true);
             Time.timeScale = 0;
             Destroy (gameObject);
         }
@@ -264,7 +272,6 @@ public class CharacterStats : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.F2)) {
             LoadPlayer ();
         }
-        
 
     }
 

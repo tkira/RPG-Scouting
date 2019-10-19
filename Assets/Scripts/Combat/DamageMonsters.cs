@@ -10,11 +10,12 @@ public class DamageMonsters : MonoBehaviour {
 
     public CharacterStats characterStats;
     public MonsterTakeDamage mTd;
-    
+
+    public AudioController asssc;
 
     //Deal Damage and deal damage based on type;
     void OnTriggerEnter2D (Collider2D other) {
-        if (other.gameObject.tag == "MonsterHitbox" ) {
+        if (other.gameObject.tag == "MonsterHitbox") {
             mTd = other.gameObject.GetComponent<MonsterTakeDamage> ();
             if (slashDamageType) {
                 mTd.dealSlashingDamage (characterStats.meleeAttack);
@@ -25,6 +26,9 @@ public class DamageMonsters : MonoBehaviour {
             } else if (explosiveDamageType) {
                 mTd.dealExplosiveDamage (characterStats.meleeAttack);
             }
+            asssc.playSwordHit ();
+        } else {
+            asssc.playSwordMiss ();
         }
     }
 }

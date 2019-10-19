@@ -277,24 +277,35 @@ public class ScoutingSystem : MonoBehaviour {
             if (randomNo > scoutingLvlPercent) {
                 bool notSame = true;
                 bool founddebuff = false;
-                while (notSame) {
-                    int randombuff = Random.Range (0, (debuffsfunction.Count - 1));
-                    //Search for existing
-                    for (int p = 0; p < debuffsActivated.Count - 1; p++) {
-                        if (debuffsActivated[p] == randombuff) {
-                            founddebuff = true;
-                        }
-                    }
-                    if (founddebuff != true) {
-                        debuffsActivated.Add (randombuff);
-                        debuffsfunction[randombuff] ();
-                        notSame = false;
-                        break;
-                    }
-                }
+
+                int randombuff = Random.Range (0, (debuffsfunction.Count - 1));
+                debuffsActivated.Add (randombuff);
+                debuffsfunction[randombuff] ();
+                /*
+                                while (notSame) {
+                                    int randombuff = Random.Range (0, (debuffsfunction.Count - 1));
+                                    //Search for existing
+                                    for (int p = 0; p < debuffsActivated.Count - 1; p++) {
+                                        if (debuffsActivated[p] == randombuff) {
+                                            founddebuff = true;
+                                        }
+                                    }
+                                    if (founddebuff != true) {
+                                        debuffsActivated.Add (randombuff);
+                                        debuffsfunction[randombuff] ();
+                                        notSame = false;
+                                        break;
+                                    }
+                                }
+                                */
             } else {
                 bool notSame = true;
                 bool foundbuff = false;
+                int randombuff = Random.Range (0, (buffsfunction.Count - 1));
+                buffsActivated.Add (randombuff);
+                buffsfunction[randombuff] ();
+
+                /*
                 while (notSame) {
                     int randombuff = Random.Range (0, (buffsfunction.Count - 1));
                     //Search for existing
@@ -310,6 +321,7 @@ public class ScoutingSystem : MonoBehaviour {
                         break;
                     }
                 }
+                */
             }
         }
 

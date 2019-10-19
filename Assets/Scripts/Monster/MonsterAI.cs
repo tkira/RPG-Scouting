@@ -117,10 +117,11 @@
      bool attackDelay;
      public GameObject bullet;
      public Transform bulletSpawn;
-     
+     public MonsterContoller mss;
      void attack () {
          if (!attackDelay) {
              attackDelay = true;
+             mss.playshoot ();
              GameObject bulletPro = Instantiate (bullet, bulletSpawn.position, Quaternion.identity);
              bulletPro.gameObject.GetComponent<DamagePlayerRange> ().monsterStats = monStats;
              StartCoroutine (attackDelayTimer ());
