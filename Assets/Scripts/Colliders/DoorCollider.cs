@@ -23,10 +23,12 @@ public class DoorCollider : MonoBehaviour {
 
     public RightClick rcPlayer;
     private MonsterTemplates monstersTemplates;
+    private GameObject mapPlayer;
 
     void Start () {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
         monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
+        mapPlayer = GameObject.FindGameObjectWithTag ("MapPlayer");
     }
 
     void OnTriggerEnter2D (Collider2D col) {
@@ -190,6 +192,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y + 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y + 9f, startPos.z)) {
+                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x, mapPlayer.transform.position.y + 0.2817f, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionT ();
                 FadeOut ();
                 keyEntered = false;
@@ -202,6 +205,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
+                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x + 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionR ();
                 FadeOut ();
                 keyEntered = false;
@@ -214,6 +218,7 @@ public class DoorCollider : MonoBehaviour {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
+                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x  - 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionL ();
                 FadeOut ();
                 keyEntered = false;
@@ -226,6 +231,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
+                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x, mapPlayer.transform.position.y - 0.2817f, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionB ();
                 FadeOut ();
                 keyEntered = false;
