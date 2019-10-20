@@ -19,7 +19,7 @@ public class LadderUsage : MonoBehaviour
     void Update()
     {
         if (!monstersTemplates.doorClosed && Input.GetKeyDown (KeyCode.Space) && LadderEnter == true) {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Dungeon");
         }
     }
 

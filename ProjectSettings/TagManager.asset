@@ -31,6 +31,7 @@ TagManager:
   - Hole
   - Wall
   - weapons
+  - MapPlayer
   layers:
   - Default
   - TransparentFX
@@ -89,6 +90,9 @@ TagManager:
   - name: Monsters
     uniqueID: 1290698243
     locked: 0
+  - name: Map Doors
+    uniqueID: 1291778831
+    locked: 0
   - name: MapRooms
     uniqueID: 973798151
     locked: 0
@@ -98,11 +102,17 @@ TagManager:
   - name: MapSymbols
     uniqueID: 712738761
     locked: 0
+  - name: MapPlayer
+    uniqueID: 4247823885
+    locked: 0
   - name: Player
     uniqueID: 2990528803
     locked: 0
   - name: Icons
     uniqueID: 269309939
+    locked: 0
+  - name: Ladder
+    uniqueID: 2818070929
     locked: 0
   - name: Popup
     uniqueID: 712410681

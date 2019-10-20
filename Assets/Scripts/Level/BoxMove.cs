@@ -26,7 +26,7 @@ public class BoxMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown ("e") && boxNear) {
+        if (Input.GetKeyDown (KeyCode.Space) && boxNear) {
             switch(direction){
                 case 1:
                 boxTarget = new Vector3 (box.transform.position.x-1, box.transform.position.y, box.transform.position.z);

@@ -8,9 +8,13 @@ public class PlayerTakeDamage : MonoBehaviour {
 
     public CharacterStats characterStats;
 
+    private GameObject mapPlayer;
+
+
     void Start() //broken floor functionality
     {
-        player = GameObject.FindGameObjectWithTag ("Player");
+        player = GameObject.FindGameObjectWithTag ("Player"); //Matt added this
+        mapPlayer = GameObject.FindGameObjectWithTag ("MapPlayer");
     }
 
     public void dealSlashingDamage (float meleeAttack) {
@@ -30,9 +34,10 @@ public class PlayerTakeDamage : MonoBehaviour {
     }
 
     void OnTriggerEnter2D (Collider2D other) { //broken floor functionality
-        if (other.CompareTag ("BrokenFloor")) {
+        if (other.CompareTag ("BrokenFloor")) { //Matt added this
             player.transform.position = new Vector3 (0, 0, 0);
             Camera.main.transform.position = new Vector3 (0, 0, -10);
+            mapPlayer.transform.localPosition = new Vector3(5.5f , 3, 0);
         }
     }
 }
