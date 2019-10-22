@@ -1,17 +1,11 @@
 ﻿<Properties StartupConfiguration="{B27C6DDD-844D-7065-0214-68879764FE5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Colliders/DoorCollider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PubBar/Position.cs">
     <Files>
-      <File FileName="Assets/Scripts/Currency/Currency.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/GlobalVariablesController.cs" />
-      <File FileName="Assets/Scripts/Monster/MonsterAI.cs" Line="54" Column="11" />
-      <File FileName="Assets/Scripts/SaveLoad/PlayerStats.cs" Line="40" Column="48" />
-      <File FileName="Assets/Scripts/Scouting/ScoutingController.cs" />
-      <File FileName="Assets/Scripts/SaveLoad/Startmenu.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scripts/Character/CharacterStats.cs" Line="234" Column="35" />
-      <File FileName="Assets/Scripts/Mainmenu.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" Line="100" Column="36" NotebookId="1" />
-      <File FileName="Assets/Scripts/UI/Weapons.cs" Line="8" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Mainmenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" />
+      <File FileName="Assets/Scripts/UI/Weapons.cs" />
+      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PubBar/Position.cs" Line="13" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
