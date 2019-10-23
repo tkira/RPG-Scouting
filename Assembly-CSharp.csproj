@@ -74,7 +74,6 @@
     <Compile Include="Assets\Scripts\Combat\PlayerDetectMonster.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerTakeDamage.cs" />
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Currency\Currency.cs" />
     <Compile Include="Assets\Scripts\GlobalVariablesController.cs" />
     <Compile Include="Assets\Scripts\KeyControls\CloneFunctions.cs" />
     <Compile Include="Assets\Scripts\KeyControls\CloneSkill.cs" />
@@ -115,6 +114,8 @@
     <Compile Include="Assets\Scripts\SceneChanger\Menu.cs" />
     <Compile Include="Assets\Scripts\Scouting\ScoutingController.cs" />
     <Compile Include="Assets\Scripts\Scouting\ScoutingSystem.cs" />
+    <Compile Include="Assets\Scripts\Shop\Currency.cs" />
+    <Compile Include="Assets\Scripts\Shop\shopmanager.cs" />
     <Compile Include="Assets\Scripts\Sounds\AudioController.cs" />
     <Compile Include="Assets\Scripts\Sounds\MonsterContoller.cs" />
     <Compile Include="Assets\Scripts\Sounds\PlayerWalk.cs" />

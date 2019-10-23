@@ -51,8 +51,9 @@ public class Weapons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown (KeyCode.Space) && trigger == true && pressed == false)
+        if (Input.GetKeyDown (KeyCode.Space) && trigger == true)
         {
+            Debug.Log("!!!!!!!");
             shop.SetActive(true);
             textDisplay.text = "";
             NextSentence();
