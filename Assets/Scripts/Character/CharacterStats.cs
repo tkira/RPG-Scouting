@@ -45,7 +45,7 @@ public class CharacterStats : MonoBehaviour {
     }
     public void LoadPlayer () {
         PlayerStats stats = SaveManager.Load ();
-
+        Time.timeScale = 1;
         if (stats.maxHealth != 0) {
             characterCurrentHealth = stats.characterCurrentHealth;
             coins = stats.coins;

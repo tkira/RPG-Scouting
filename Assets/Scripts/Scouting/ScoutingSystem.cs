@@ -227,8 +227,10 @@ public class ScoutingSystem : MonoBehaviour {
                     buffsString = buffsString + msg + "\n";
                 }
                 buffs.text = buffsString;
+                Time.timeScale = 0;
             } else {
                 scoutingPanel.SetActive (false);
+                Time.timeScale = 1;
             }
         }
     }

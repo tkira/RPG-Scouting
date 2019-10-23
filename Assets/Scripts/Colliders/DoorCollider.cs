@@ -9,7 +9,7 @@ public class DoorCollider : MonoBehaviour {
     public GameObject interactIcon;
     public GameObject DoorIcon, shopicon;
     public GameObject camera;
-    public bool Ttrigger = false , shop = false;
+    public bool Ttrigger = false, shop = false;
     public bool Btrigger = false;
     public bool Rtrigger = false;
     public bool Ltrigger = false;
@@ -23,7 +23,7 @@ public class DoorCollider : MonoBehaviour {
 
     public RightClick rcPlayer;
     private MonsterTemplates monstersTemplates;
-    private GameObject mapPlayer;
+    public GameObject mapPlayer;
 
     void Start () {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
@@ -47,9 +47,8 @@ public class DoorCollider : MonoBehaviour {
             if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = true;
             }
-            if (col.gameObject.tag == "weapons")
-            {
-                shopicon.SetActive(true);
+            if (col.gameObject.tag == "weapons") {
+                shopicon.SetActive (true);
                 shop = true;
             }
 
@@ -149,9 +148,8 @@ public class DoorCollider : MonoBehaviour {
             }
             DoorIcon.SetActive (false);
         }
-        if (col.gameObject.tag == "weapons")
-        {
-            shopicon.SetActive(false);
+        if (col.gameObject.tag == "weapons") {
+            shopicon.SetActive (false);
             shop = false;
         }
     }
@@ -167,8 +165,7 @@ public class DoorCollider : MonoBehaviour {
             keyEntered = true;
             startPos = camera.transform.position;
         }
-        if (Input.GetKeyDown (KeyCode.Space) && shop == true)
-        {
+        if (Input.GetKeyDown (KeyCode.Space) && shop == true) {
 
         }
         //----Town scene change
@@ -181,7 +178,8 @@ public class DoorCollider : MonoBehaviour {
             }
             if (Dungeondoor == true) {
                 //SceneManager.LoadScene("SampleScene");
-                scoutingPanel.SetActive (true); 
+                scoutingPanel.SetActive (true);
+                Time.timeScale = 0;
             }
             if (Blacksmithdoor == true) {
                 SceneManager.LoadScene ("Blacksmith");
@@ -192,7 +190,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y + 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y + 9f, startPos.z)) {
-                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x, mapPlayer.transform.position.y + 0.2817f, mapPlayer.transform.position.z);
+                mapPlayer.transform.position = new Vector3 (mapPlayer.transform.position.x, mapPlayer.transform.position.y + 0.2817f, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionT ();
                 FadeOut ();
                 keyEntered = false;
@@ -205,7 +203,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x + 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x + 16f, startPos.y, startPos.z)) {
-                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x + 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
+                mapPlayer.transform.position = new Vector3 (mapPlayer.transform.position.x + 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionR ();
                 FadeOut ();
                 keyEntered = false;
@@ -218,7 +216,7 @@ public class DoorCollider : MonoBehaviour {
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x - 16f, startPos.y, startPos.z), speed * Time.deltaTime);
             FadeIn ();
             if (camera.transform.position == new Vector3 (startPos.x - 16f, startPos.y, startPos.z)) {
-                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x  - 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
+                mapPlayer.transform.position = new Vector3 (mapPlayer.transform.position.x - 0.55f, mapPlayer.transform.position.y, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionL ();
                 FadeOut ();
                 keyEntered = false;
@@ -231,7 +229,7 @@ public class DoorCollider : MonoBehaviour {
             FadeIn ();
             camera.transform.position = Vector3.MoveTowards (camera.transform.position, new Vector3 (startPos.x, startPos.y - 9f, startPos.z), speed * Time.deltaTime);
             if (camera.transform.position == new Vector3 (startPos.x, startPos.y - 9f, startPos.z)) {
-                mapPlayer.transform.position = new Vector3(mapPlayer.transform.position.x, mapPlayer.transform.position.y - 0.2817f, mapPlayer.transform.position.z);
+                mapPlayer.transform.position = new Vector3 (mapPlayer.transform.position.x, mapPlayer.transform.position.y - 0.2817f, mapPlayer.transform.position.z);
                 rcPlayer.teleportToNewPositionB ();
                 FadeOut ();
                 keyEntered = false;
@@ -247,6 +245,9 @@ public class DoorCollider : MonoBehaviour {
 
     public CanvasGroup uiElement;
 
+    public void unpause () {
+        Time.timeScale = 1;
+    }
     void FadeIn () {
         StartCoroutine (FadeCanvasGroup (uiElement, uiElement.alpha, 1, .2f));
     }

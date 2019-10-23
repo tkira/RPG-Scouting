@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlobalVariablesController : MonoBehaviour {
 
     public int scoutingLvl;
-
+    public int lvlcounter;
     //CharacterStats
     public float currentLvl;
     public float currentExp;

@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LadderUsage : MonoBehaviour
-{
+public class LadderUsage : MonoBehaviour {
 
     private MonsterTemplates monstersTemplates;
     public bool LadderEnter;
+    public GlobalVariablesController gvc;
+    public CharacterStats cs;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start () {
         LadderEnter = false;
         monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
+        gvc = GameObject.Find ("GlobalVariables").GetComponent<GlobalVariablesController> ();
+        cs = GameObject.Find ("Player").GetComponent<CharacterStats> ();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update () {
         if (!monstersTemplates.doorClosed && Input.GetKeyDown (KeyCode.Space) && LadderEnter == true) {
-            SceneManager.LoadScene("Dungeon");
+            gvc.maxHealth = cs.characterCurrentHealth;
+            gvc.lvlcounter = gvc.lvlcounter + 1;
+            SceneManager.LoadScene ("Dungeon");
         }
     }
 
@@ -30,7 +33,7 @@ public class LadderUsage : MonoBehaviour
         }
     }
 
-        void OnTriggerExit2D (Collider2D other) {
+    void OnTriggerExit2D (Collider2D other) {
 
         if (other.CompareTag ("PlayerHitbox")) {
             LadderEnter = false;
