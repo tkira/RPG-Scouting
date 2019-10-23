@@ -31,7 +31,7 @@ public class SkillController : MonoBehaviour {
                 StartCoroutine (skill1StartCountdown ());
             }
         } else if (Input.GetKeyDown (KeyCode.E)) {
-            if (!skill2.skillRunning && !skill2CooldownB && rc.moving) {
+            if (!skill2.skillRunning && !skill2CooldownB) {
                 skill2.runSkill ();
                 skill2CooldownB = true;
                 StartCoroutine (skill2StartCountdown ());
