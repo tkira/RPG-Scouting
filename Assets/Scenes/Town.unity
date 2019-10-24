@@ -6438,6 +6438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoutingLvl: 0
+  lvlcounter: 0
   currentLvl: 0
   currentExp: 0
   expNeedToLvl: 0
@@ -7468,7 +7469,7 @@ MonoBehaviour:
   expNeedToLvl: 3
   totalExp: 4
   vitality: 5
-  maxHealth: 3
+  maxHealth: 1000
   defence: 50
   meleeAttack: 500
   rangeAttack: 500
