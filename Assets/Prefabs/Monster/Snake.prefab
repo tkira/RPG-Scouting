@@ -358,12 +358,15 @@ MonoBehaviour:
   monStats: {fileID: 8567877389379460509}
   rangedMonster: 0
   meleeMonster: 1
+  withTransitionAni: 0
+  transistion: 0
   monsAni: {fileID: 2107505120}
   playersss: []
   players: []
   meleeAttackHitbox: {fileID: 8567877388671702924}
   bullet: {fileID: 0}
   bulletSpawn: {fileID: 0}
+  mss: {fileID: 0}
 --- !u!212 &8567877389379460510
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -400,7 +403,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1304438493
-  m_SortingLayer: 11
+  m_SortingLayer: 13
   m_SortingOrder: 0
   m_Sprite: {fileID: 523844683030640136, guid: d0a909d4e606dbe4c8a861e755213fd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
