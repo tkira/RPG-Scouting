@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddRoom : MonoBehaviour
+public class AddRoom : MonoBehaviour //Not attached to puzzle rooms so the ladder doesnt spanw in them.
 {
 
     private RoomTemplates templates;

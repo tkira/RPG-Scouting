@@ -32,25 +32,25 @@ public class RightClick : MonoBehaviour {
     }
 
     public void teleportToNewPositionT () {
-        transform.position = new Vector3 (transform.position.x, transform.position.y + 6, transform.position.z);
+        transform.position = new Vector3 (transform.position.x, transform.position.y + 5, transform.position.z); //Changed from 6 so you dont go to far into the room (Matt)
         StartCoroutine (Wait (transform.position));
         playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionB () {
-        transform.position = new Vector3 (transform.position.x, transform.position.y - 6, transform.position.z);
+        transform.position = new Vector3 (transform.position.x, transform.position.y - 5, transform.position.z); //Changed from 6 so you dont go to far into the room (Matt)
         StartCoroutine (Wait (transform.position));
         playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionR () {
-        transform.position = new Vector3 (transform.position.x + 4, transform.position.y, transform.position.z);
+        transform.position = new Vector3 (transform.position.x + 3, transform.position.y, transform.position.z); //Changed from 4 so you dont go to far into the room (Matt)
         StartCoroutine (Wait (transform.position));
         playe2d.velocity = Vector3.zero;
         stop ();
     }
     public void teleportToNewPositionL () {
-        transform.position = new Vector3 (transform.position.x - 4, transform.position.y, transform.position.z);
+        transform.position = new Vector3 (transform.position.x - 3, transform.position.y, transform.position.z); //Changed from 4 so you dont go to far into the room (Matt)
         playe2d.velocity = Vector3.zero;
         StartCoroutine (Wait (transform.position));
         stop ();
