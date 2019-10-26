@@ -282,7 +282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6048633514774303860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa7e60ba829fbf440b6c86e6880a8f0e, type: 3}
   m_Name: 
@@ -1047,6 +1047,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4043157390517312675}
     m_Modifications:
+    - target: {fileID: 8818738639629211240, guid: 8941e3c60341e8445b5007ae41b9ed79,
+        type: 3}
+      propertyPath: m_Name
+      value: LeftDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 466811564275584633, guid: 8941e3c60341e8445b5007ae41b9ed79,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,11 +1106,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8818738639629211240, guid: 8941e3c60341e8445b5007ae41b9ed79,
-        type: 3}
-      propertyPath: m_Name
-      value: LeftDoor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8941e3c60341e8445b5007ae41b9ed79, type: 3}

@@ -26,19 +26,20 @@ public class RoomTemplates : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (waitTime <= 0 && !spawnedStairs) {
-            //var nonintersect = rooms.Except(PuzzleRooms).Union( rooms.Except(PuzzleRooms));
-            int x = 1;
-            while(x <rooms.Count-1){
-                if(PuzzleRooms.Contains(rooms[rooms.Count - x])){
-                    x++;
-                }
-                else{
-                    Instantiate (stairs, rooms[rooms.Count - x].transform.position, Quaternion.identity);
-                    break;
-                }
-            }
+            //var nonintersect = rooms.Except(PuzzleRooms).Union( rooms.Except(PuzzleRooms)); //Tried to use this to prevent the ladder spawning in puzzle rooms but it didnt work
+                                                                                              //Now just dont had them to the array in the 1st place 
+            // int x = 1;
+            // while(x <rooms.Count-1){
+            //     if(PuzzleRooms.Contains(rooms[rooms.Count - x])){
+            //         x++;
+            //     }
+            //     else{
+            Instantiate (stairs, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+            //         break;
+            //     }
+            // }
 
-            GameObject mapS = Instantiate (mapStairs, new Vector3 ((0.0313f * rooms[rooms.Count - x].transform.position.x) + 5.5f, (0.0313f * rooms[rooms.Count - x].transform.position.y) + 3, 0), Quaternion.identity);
+            GameObject mapS = Instantiate (mapStairs, new Vector3 ((0.0313f * rooms[rooms.Count - 1].transform.position.x) + 5.5f, (0.0313f * rooms[rooms.Count - 1].transform.position.y) + 3, 0), Quaternion.identity);
             mapS.transform.SetParent (GameObject.FindGameObjectWithTag ("MapGUI").transform, false);
 
         spawnedStairs = true;

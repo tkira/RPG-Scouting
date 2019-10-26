@@ -412,7 +412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4943964943162399922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa7e60ba829fbf440b6c86e6880a8f0e, type: 3}
   m_Name: 
@@ -927,11 +927,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4634883561600696301}
     m_Modifications:
-    - target: {fileID: 8415794828612887061, guid: a7feded9c326be04f96975c1e7993222,
-        type: 3}
-      propertyPath: m_Name
-      value: Puzzle1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8415794828612887060, guid: a7feded9c326be04f96975c1e7993222,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -987,6 +982,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8415794828612887061, guid: a7feded9c326be04f96975c1e7993222,
+        type: 3}
+      propertyPath: m_Name
+      value: Puzzle1 (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7feded9c326be04f96975c1e7993222, type: 3}
 --- !u!4 &1838546590 stripped
@@ -1002,11 +1002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4634883561600696301}
     m_Modifications:
-    - target: {fileID: 2536654394701504446, guid: a2d96888b1a56884f97a325715860a7d,
-        type: 3}
-      propertyPath: m_Name
-      value: RightDoor
-      objectReference: {fileID: 0}
     - target: {fileID: 476569479318735220, guid: a2d96888b1a56884f97a325715860a7d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1062,6 +1057,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2536654394701504446, guid: a2d96888b1a56884f97a325715860a7d,
+        type: 3}
+      propertyPath: m_Name
+      value: RightDoor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d96888b1a56884f97a325715860a7d, type: 3}
 --- !u!4 &9079883946716392093 stripped
@@ -1077,11 +1077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4634883561600696301}
     m_Modifications:
-    - target: {fileID: 3266422717494998368, guid: 66bb5451387b4634aa89cf65cef5f3bd,
-        type: 3}
-      propertyPath: m_Name
-      value: WallColliders
-      objectReference: {fileID: 0}
     - target: {fileID: 3266422717494998369, guid: 66bb5451387b4634aa89cf65cef5f3bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1136,6 +1131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266422717494998368, guid: 66bb5451387b4634aa89cf65cef5f3bd,
+        type: 3}
+      propertyPath: m_Name
+      value: WallColliders
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66bb5451387b4634aa89cf65cef5f3bd, type: 3}
