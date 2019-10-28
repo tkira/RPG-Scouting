@@ -18,7 +18,7 @@ public class DoorCollider : MonoBehaviour {
     public bool Bardoor = false;
     public bool Blacksmithdoor = false;
     public bool Dungeondoor = false;
-    public bool Insidebar = false;
+    public bool Insidebar = false, Insidefactory = false;
     //Enable object if in range
 
     public RightClick rcPlayer;
@@ -33,13 +33,17 @@ public class DoorCollider : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D col) {
         //-----Town door icon/trigger
-        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar") {
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar" || col.gameObject.tag == "Insidefactory") {
             interactIcon.SetActive (true);
             if (col.gameObject.tag == "Bardoor") {
                 Bardoor = true;
             }
             if (col.gameObject.tag == "Insidebar") {
                 Insidebar = true;
+            }
+            if (col.gameObject.tag == "Insidefactory")
+            {
+                Insidefactory = true;
             }
             if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = true;
@@ -95,7 +99,7 @@ public class DoorCollider : MonoBehaviour {
             interactIcon.SetActive (false);
         }
         //---- Town door icon/trigger
-        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar") {
+        if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar" || col.gameObject.tag == "Insidefactory") {
             interactIcon.SetActive (false);
 
             if (col.gameObject.tag == "Bardoor") {
@@ -103,6 +107,10 @@ public class DoorCollider : MonoBehaviour {
             }
             if (col.gameObject.tag == "Insidebar") {
                 Insidebar = false;
+            }
+            if (col.gameObject.tag == "Insidefactory")
+            {
+                Insidefactory = false;
             }
             if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = false;
@@ -172,6 +180,10 @@ public class DoorCollider : MonoBehaviour {
         if (keyEntered == true) {
             if (Insidebar == true) {
                 SceneManager.LoadScene ("Town");
+            }
+            if (Insidefactory == true)
+            {
+                SceneManager.LoadScene("Town");
             }
             if (Bardoor == true) {
                 SceneManager.LoadScene ("Bar");

@@ -32,6 +32,7 @@ TagManager:
   - Wall
   - weapons
   - MapPlayer
+  - Insidefactory
   layers:
   - Default
   - TransparentFX
