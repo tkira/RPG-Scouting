@@ -72,4 +72,8 @@ public class Mainmenu : MonoBehaviour
         //BG.SetActive(false);
         
     }
+    public void exitgame()
+    {
+        Application.Quit();
+    }
 }
