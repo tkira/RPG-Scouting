@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{B27C6DDD-844D-7065-0214-68879764FE5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mainmenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Shop/shopmanager.cs">
     <Files>
       <File FileName="Assets/Scripts/Mainmenu.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SceneChanger/Menu.cs" />
       <File FileName="Assets/Scripts/UI/Weapons.cs" />
-      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="169" Column="37" />
+      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" />
       <File FileName="Assets/Scripts/PubBar/Position.cs" />
-      <File FileName="Assets/Scripts/Shop/shopmanager.cs" />
+      <File FileName="Assets/Scripts/Shop/shopmanager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
