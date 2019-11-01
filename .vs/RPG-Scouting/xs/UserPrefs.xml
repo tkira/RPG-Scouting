@@ -1,17 +1,12 @@
 ﻿<Properties StartupConfiguration="{B27C6DDD-844D-7065-0214-68879764FE5B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Shop/shopmanager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Colliders/DoorCollider.cs">
     <Files>
-      <File FileName="Assets/Scripts/Mainmenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SceneChanger/Menu.cs" />
-      <File FileName="Assets/Scripts/UI/Weapons.cs" />
-      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" />
-      <File FileName="Assets/Scripts/PubBar/Position.cs" />
-      <File FileName="Assets/Scripts/Shop/shopmanager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Colliders/DoorCollider.cs" Line="41" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7b26f6f6-0e7d-42e5-9642-eba3be53485c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8ed5d851-10b0-42d0-8d28-3d2e616ce7b4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
