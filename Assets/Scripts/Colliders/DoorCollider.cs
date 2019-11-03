@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class DoorCollider : MonoBehaviour {
 
-    public GameObject interactIcon;
+    public GameObject interactIcon, factoryicon, baricon, ballon;
     public GameObject DoorIcon, shopicon;
     public GameObject camera;
     public bool Ttrigger = false, shop = false;
@@ -34,22 +34,27 @@ public class DoorCollider : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D col) {
         //-----Town door icon/trigger
         if (col.gameObject.tag == "Bardoor" || col.gameObject.tag == "Blacksmithdoor" || col.gameObject.tag == "Dungeondoor" || col.gameObject.tag == "Insidebar" || col.gameObject.tag == "Insidefactory") {
-            interactIcon.SetActive (true);
-            if (col.gameObject.tag == "Bardoor") {
+			
+			if (col.gameObject.tag == "Bardoor") {
                 Bardoor = true;
+				baricon.SetActive(true);
             }
             if (col.gameObject.tag == "Insidebar") {
                 Insidebar = true;
-            }
+				interactIcon.SetActive(true);
+			}
             if (col.gameObject.tag == "Insidefactory")
             {
                 Insidefactory = true;
-            }
+				interactIcon.SetActive(true);
+			}
             if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = true;
+				factoryicon.SetActive(true);
             }
             if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = true;
+				ballon.SetActive(true);
             }
             if (col.gameObject.tag == "weapons") {
                 shopicon.SetActive (true);
@@ -104,6 +109,7 @@ public class DoorCollider : MonoBehaviour {
 
             if (col.gameObject.tag == "Bardoor") {
                 Bardoor = false;
+				baricon.SetActive(false);
             }
             if (col.gameObject.tag == "Insidebar") {
                 Insidebar = false;
@@ -114,9 +120,11 @@ public class DoorCollider : MonoBehaviour {
             }
             if (col.gameObject.tag == "Blacksmithdoor") {
                 Blacksmithdoor = false;
+				factoryicon.SetActive(false);
             }
             if (col.gameObject.tag == "Dungeondoor") {
                 Dungeondoor = false;
+				ballon.SetActive(false);
             }
         }
         //-----Door icon & triggers
