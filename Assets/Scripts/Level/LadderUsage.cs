@@ -22,7 +22,13 @@ public class LadderUsage : MonoBehaviour {
         if (!monstersTemplates.doorClosed && Input.GetKeyDown (KeyCode.Space) && LadderEnter == true) {
             gvc.maxHealth = cs.characterCurrentHealth;
             gvc.lvlcounter = gvc.lvlcounter + 1;
-            SceneManager.LoadScene ("Dungeon");
+            if(gvc.lvlcounter == 3){
+                SceneManager.LoadScene ("TreasureRoom");
+            }
+            else{
+                SceneManager.LoadScene ("Dungeon");
+            }
+            
         }
     }
 
