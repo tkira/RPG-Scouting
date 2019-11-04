@@ -218,7 +218,6 @@ public class CharacterStats : MonoBehaviour {
     public ScoutingSystem cs;
     // Start is called before the first frame update
     void Start () {
-        LoadPlayer ();
         if (SceneManager.GetActiveScene ().name == "Town") {
             if (Startmenu.loadGame == true) {
                 LoadPlayer ();
