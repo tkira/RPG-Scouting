@@ -22,11 +22,11 @@ public class LadderUsage : MonoBehaviour {
         if (!monstersTemplates.doorClosed && Input.GetKeyDown (KeyCode.Space) && LadderEnter == true) {
             gvc.maxHealth = cs.characterCurrentHealth;
             gvc.lvlcounter = gvc.lvlcounter + 1;
-            if(gvc.lvlcounter == 3){
+            if(gvc.lvlcounter == 2){
                 SceneManager.LoadScene ("TreasureRoom");
             }
             else{
-                SceneManager.LoadScene ("Dungeon");
+                SceneManager.LoadScene ("Puzzle Display");
             }
             
         }
