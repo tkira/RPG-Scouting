@@ -28,7 +28,6 @@ public class DoorCollider : MonoBehaviour {
     void Start () {
         //Physics2D.IgnoreLayerCollision (8, 9,true);
         monstersTemplates = GameObject.FindGameObjectWithTag ("Monsters").GetComponent<MonsterTemplates> ();
-        mapPlayer = GameObject.FindGameObjectWithTag ("MapPlayer");
     }
 
     void OnTriggerEnter2D (Collider2D col) {
@@ -180,6 +179,7 @@ public class DoorCollider : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.Space) && !keyEntered) {
             keyEntered = true;
             startPos = camera.transform.position;
+            mapPlayer = GameObject.FindGameObjectWithTag ("MapPlayer");
         }
         if (Input.GetKeyDown (KeyCode.Space) && shop == true) {
 

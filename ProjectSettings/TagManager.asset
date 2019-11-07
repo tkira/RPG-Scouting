@@ -85,6 +85,9 @@ TagManager:
   - name: Symbols
     uniqueID: 1175433679
     locked: 0
+  - name: BoxInHole
+    uniqueID: 2845639753
+    locked: 0
   - name: Treasure
     uniqueID: 237855963
     locked: 0
